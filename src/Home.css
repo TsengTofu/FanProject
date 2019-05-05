@@ -1,0 +1,10 @@
+.topContent{
+    padding-top: 80px;
+    background: url("./img/index_bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 60% center;
+    max-width: 1920px;
+    height: 400px;
+    overflow-y: hidden;
+}

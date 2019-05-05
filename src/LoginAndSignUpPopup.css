@@ -1,0 +1,266 @@
+/* 按鈕的CSS */
+.joinRightNow {
+    color: #fff;
+    border-style: none;
+    font-family: "微軟正黑體";
+    font-size: 1.5vw;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid #fff;
+}
+
+.popup-content {
+    width:80% !important;
+    border-radius: 5px;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.4vw;
+}
+
+.signup_form, .login_form {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.signup_form input, .login_form input {
+    width: 80%;
+    border-radius: 5px;
+    border: solid 1px #888;
+}
+
+.signup_form div, .login_form div {
+    margin: 2%;
+}
+
+.signup_form button, .login_form button {
+    background: #000;
+    color: #fff;
+    border-style: none;
+    font-weight: bold;
+    font-size: 1.6vw;
+    border-radius: 5px;
+    font-family: "微軟正黑體";
+    width: 45%;
+}
+
+.signup_form button:hover, .login_form button:hover {
+    background: #eee;
+}
+
+/* 立即加入按鈕 */
+
+.joinRightNow {
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 3px solid rgb(0, 40, 70);
+    cursor: pointer;
+}
+
+.joinRightNow:hover {
+    animation: border-flicker 2s linear forwards;
+}
+
+.joinRightNow p {
+    font-family: "Baloo Chettan";
+    font-weight: 300;
+    font-size: 30px;
+    color: rgba(120, 0, 50, .5);
+    margin: 0 auto;
+}
+
+.joinRightNow:hover p {
+    animation: text-flicker 2s linear forwards;
+}
+
+.joinRightNow:hover .break_point {
+    animation: letter-flicker 3s linear infinite;
+}
+
+@keyframes text-flicker {
+    2% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    3% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    6% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    9% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    11% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    14% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    18% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    32% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    33% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    37% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    39% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    43% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    46% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    47% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    100% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+}
+
+@keyframes letter-flicker {
+    2% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    3% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    6% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    9% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    11% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    14% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    18% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    32% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    33% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    37% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    39% {
+        color: rgba(120, 0, 50, .5);
+        text-shadow: none;
+    }
+    40% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    100% {
+        color: rgb(230, 0, 120);
+        text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+}
+
+@keyframes border-flicker {
+    2% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    3% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    5% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    6% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    7% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    9% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    13% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    16% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    18% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    22% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    34% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    36% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    54% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    100% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230), 0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+}
+
+/* RWD */
+
+@media screen and (max-width: 1000px) {}
