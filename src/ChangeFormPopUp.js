@@ -347,11 +347,20 @@ class ChangeFormPopUp extends React.Component {
                       <option value="">請選擇</option>
                       {concertName}
                     </select>
+                  </div>
+                  <div>
                     <label htmlFor="hold_area">舉行地點　</label>
                     <select value={this.state.ConcertPlace} onChange={this.changeConcertPlace.bind(this)}>
                       <option value="">請選擇</option>
                       {concertPlace}
-                    </select>                    
+                    </select>
+                    <label htmlFor="change_way">交換方式　</label>
+                    <select value={this.state.changeWay} id="changeWay" onChange={this.handleChangeValue.bind(this)} required>
+                      <option value="">請選擇</option>
+                      <option value="send_package">郵寄</option>
+                      <option value="face_to_face">面交</option>
+                      <option value="others_way">其他</option>
+                    </select>
                   </div>
                   <div>
                     <label htmlFor="hold_ticket_area">持有票券區域 & 票價　</label>
@@ -375,26 +384,17 @@ class ChangeFormPopUp extends React.Component {
                       {exChangePrices}
                     </select>
                   </div>
+                  <div>
 
+                  </div>
                   <div>
                     <label htmlFor="price_spread">票券價差　<span className="spread_total">
                       {this.state.pricePlusTag + this.state.priceSpread}</span></label>
                   </div>
                   <div>
-                    <label htmlFor="change_way">交換方式　</label>
-                    <select value={this.state.changeWay} id="changeWay" onChange={this.handleChangeValue.bind(this)} required>
-                      <option value="">請選擇</option>
-                      <option value="send_package">郵寄</option>
-                      <option value="face_to_face">面交</option>
-                      <option value="others_way">其他</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="phoneNumber">聯絡電話　</label>
-                    <p onChange={this.handleChangeValue.bind(this)}>{this.props.profile.phone_number}</p>
-                    <p>ID：{this.state.user_id}</p>
-                    <p>Email：{this.state.email}</p>
-                    <p onChange={this.handleChangeValue.bind(this)}>姓名：{this.props.profile.user_name}</p>
+                    <span onChange={this.handleChangeValue.bind(this)}>
+                      聯絡資訊｜ {this.props.profile.user_name}  {this.props.profile.phone_number}  {this.state.email}
+                    </span>
                   </div>
                   <div>
                     <label htmlFor="ps_text">備註　</label>
@@ -404,12 +404,10 @@ class ChangeFormPopUp extends React.Component {
                     <input type="file" url={this.state.url} id="filepath" onChange={this.handleImageUpload.bind(this)} />
                     <p>上傳的圖檔請小於2MB，謝謝！</p>
                   </label>
-                  <label>
-                    <p>
-                      <input type="checkbox" checked={this.state.isChecked} onChange={this.toggleChange} required />
-                      請再次確認填寫資訊，確認無誤後再送出。
+                  <p>
+                    <input type="checkbox" checked={this.state.isChecked} onChange={this.toggleChange} required />
+                    請再次確認填寫資訊，確認無誤後再送出。
                       </p>
-                  </label>
                   <button className="ChangeFormSubmit">確認送出</button>
                 </form>
               </div>

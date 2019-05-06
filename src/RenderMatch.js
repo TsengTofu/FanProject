@@ -38,48 +38,48 @@ class RenderMatch extends React.Component {
 		let deciderUserID = e.currentTarget.getAttribute("data-userid");
 		this.setState({
 			// 讓使用者不能按
-			letButtonDisabled : true			
+			letButtonDisabled: true
 		});
 		alert('已提出申請交換！請靜候佳音');
 		// console.log(e.currentTarget.getAttribute("data-initstate"));
 		// console.log(e.currentTarget.getAttribute("data-docid"));
 		// console.log(e.currentTarget.getAttribute("data-userid"));
 		// 送出去的資料
-		this.props.exChangeApplyBtn(this.state,{deciderDocID:deciderDocID,deciderUserID:deciderUserID});
+		this.props.exChangeApplyBtn(this.state, { deciderDocID: deciderDocID, deciderUserID: deciderUserID });
 	}
 
 	render() {
 		const { renderMatchListData, changeFormData, applyDocumentID } = this.props;
-		const DocumentItems = renderMatchListData && renderMatchListData.map((item, index) => (			
+		const DocumentItems = renderMatchListData && renderMatchListData.map((item, index) => (
 			<li className="renderMatch_block" key={item.user_id}>
-				<p className='renderMatch_docID'>{item.docID}</p>
-				<img src={item.url} />
-				<p className="renderMatch_concert_name">演唱會名稱：{item.ConcertName}</p>
-				<p className="renderMatch_concert_place">演唱會地點：{item.ConcertPlace}</p>
-				<p className="renderMatch_change">交換方式：
+				<div className="imgbox">
+					<img src={item.url} />
+				</div>
+				<div>
+					<p className="renderMatch_concert_name">{item.ConcertName}</p>
+					<span className='renderMatch_docID'>{item.docID}</span>
+					<p className="renderMatch_change">
 					{
 						item.changeWay === 'send_package' && '郵寄' || item.changeWay === 'face_to_face' && '面交' || item.changeWay === 'others_way' && '其他'
-					}
-				</p>
-				<p className="renderMatch_email">對方的信箱：{item.email}</p>
-				<p className="renderMatch_change_ticket">對方欲交換票券：{item.exChangeSelectArea + ' ' + item.exChangeSelectPrice}</p>
-				<p className="renderMatch_changeState">交換狀態：
-					{
+					}｜{
 						item.initialChangeState === 0 && '等待有緣人交換' || item.initialChangeState === 1 && '等待回應' || item.initialChangeState === 2 && '已結案' || item.initialChangeState === 3 && '拒絕'
 					}
 				</p>
-				<p className="renderMatch_phone">對方的電話：{item.phoneNumber}</p>
-				<p className="renderMatch_price">票券的價差：{item.pricePlusTag + item.priceSpread}</p>
-				<p className="renderMatch_hold_ticket">對方持有票券：{item.selectName + ' ' + item.selectPrice}</p>
-				<p className="renderMatch_reminder">提醒文字：{item.reminderTxt}</p>
-
-				<p className="renderMatch_uid">對方的ID：{item.user_id}</p>
-
-				<p className="renderMatch_name">對方的名字：{item.user_name}</p>
-				{
+				</div>				
+				{/* <div className="renderMatch_info">					
+					<span className="match_user">{item.user_name}　{item.user_id}</span>
+					<p className="match_email">{item.email}</p>
+					<p className="phone_number">{item.phoneNumber}</p>
+				</div> */}
+				<div>
+					<p className="match_change_ticket">交換｜{item.exChangeSelectArea + ' ' + item.exChangeSelectPrice}</p>
+					<p className="match_hold_ticket">持有｜{item.selectName + ' ' + item.selectPrice}</p>
+				</div>
+				<p className="match_reminder"><i className="fas fa-comment-dots"></i>　{item.reminderTxt}</p>
+				<div className="bottom_buttons">				{
 					item.initialChangeState === 2 && <p>Sorry！已結案，無法申請交換</p> || item.initialChangeState !== 2 &&
 					<button data-userid={item.user_id} data-docid={item.docID} data-initstate={item.initialChangeState} data-docid={item.docID} className="send_ExChange_Request_btn" disabled={this.state.letButtonDisabled} onClick={this.exChangeApplyBtn.bind(this)}>發送交換請求</button>
-				}
+				}</div>
 			</li>
 		)
 		)
@@ -109,7 +109,7 @@ const mapStateToProps = (state) => {
 function mapDispatchToProps(dispatch) {
 	return ({
 		// 傳出去的資料是要加到申請單的那個集合裡面
-		exChangeApplyBtn: (applyData,DecideData) => dispatch(exChangeApplyBtn(applyData,DecideData))
+		exChangeApplyBtn: (applyData, DecideData) => dispatch(exChangeApplyBtn(applyData, DecideData))
 	})
 }
 

@@ -2,6 +2,7 @@
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tsengtofu.github.io/FanProject",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
@@ -9,6 +10,7 @@
     "axios": "^0.18.0",
     "firebase": "^5.9.3",
     "firebaseauth": "^1.0.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-lines-ellipsis": "^0.14.1",
@@ -27,6 +29,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

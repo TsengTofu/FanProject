@@ -7,17 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------MemberProfileApplyData------------------ */
 .apply_data_all{
     margin:1vw auto;
@@ -49,7 +38,7 @@
     width: 100%;
 }
 
-.user_apply_data_block,.renderMatch_block{
+.user_apply_data_block{
     display: flex;
     flex-direction: row;
     width: 70%;
@@ -172,4 +161,15 @@
     width: 45%;
     box-sizing: border-box;
     padding:10px;
+}
+
+
+@media screen and (max-width: 1360px) {
+    .user_apply_data_block,.apply_block_decide{
+        width:100%;
+    }
+
+    .bottom_buttons{
+        width: 27%;
+    }
 }

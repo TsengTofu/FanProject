@@ -9,6 +9,7 @@ import { Link,Redirect } from 'react-router-dom';
 import './Menu.css';
 import logout from './img/svg/logout.svg'
 import member from './img/svg/member.svg'
+import logo from './img/svg/LOGO.svg'
 
 class Menu extends React.Component {
 	constructor(props) {
@@ -31,7 +32,8 @@ class Menu extends React.Component {
 				<div className="menuList">
 					<Link to='/'>
 						<div className="logo_no_light">
-						<b><i className="fas fa-ticket-alt"></i>  F<span>in</span>d<span> Tic</span>ket</b>
+						{/* <b><i className="fas fa-ticket-alt"></i>  F<span>in</span>d<span> Tic</span>ket</b> */}
+							<img src={logo} alt=""/>
 						</div>
 					</Link>
 					<div className="right_nav">

@@ -4,10 +4,8 @@
 const initState = {
     apply: '',
     DecideData: '',
-    matchApplyDocData: '',
-    renderFulldocData: '',
-    decideFulldocData: '',
     // 回應申請者的資料
+    decideData:'',
     responseResult:'',
 }
 
@@ -26,9 +24,7 @@ const ticketChangeReducer = (state = initState, action) => {
             // getAllApplyDataToSpecificUser 對應的 function
             return {
                 // ...state,
-                matchApplyDocData: action.matchApplyDocData,
-                renderFulldocData: action.renderFulldocData,
-                decideFulldocData: action.decideFulldocData
+                decideData: action.decideData
             }
 
         case 'RESPONSE_TO_THE_APPLICANTS':

@@ -20,8 +20,8 @@
 .logo_no_light{
     display: flex;
     margin:0 2vw;
-    width: 100%;
-    
+    width: 150px;
+    margin: -6px 2vw 0px;
 }
 
 .logo_no_light b {
@@ -111,7 +111,10 @@
     display: flex;
 }
 
-
+.right_nav a:nth-child(2){
+    width: 15%;
+    display: flex;
+}
 
 .member_detail{
     display: flex;

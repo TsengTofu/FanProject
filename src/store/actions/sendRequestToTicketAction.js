@@ -59,54 +59,39 @@ export const getAllApplyDataToSpecificUser = (getAllApplyData) => {
         const firebase = getFirebase();
         const firestore = getFirestore();
         const currentWho = getState().firebase.auth.uid;
-        // 所有有申請的文件docID
-        let renderDocList = [];
-        // 所有申請的文件的 全部資訊
-        let renderFulldocData = [];
-        // 被申請的文件的資訊
-        let decideFulldocData = [];
+        // 全部的資訊
+        let applyArray = [];
+        let decideData = [];
 
         console.log(currentWho, '現在的使用者ID');
         // 現在的使用者是誰
+
         firestore.collection('ApplicationForm_context').where('deciderUserID', '==', `${currentWho}`).get().then(
             querySnapshot => {
                 querySnapshot.forEach(doc => {
                     let matchApplyDocID = doc.id;
                     let matchApplyDocData = doc.data();
-                    // console.log(matchApplyDocID, '被申請的文件ID')
+
                     firestore.collection('exchange_form').doc(`${matchApplyDocID}`).get().then(
                         querySnapshot => {
                             let data = querySnapshot.data();
                             data.docID = matchApplyDocID;
-                            decideFulldocData.push(data);
+                            // decideData.push(data);
+                            matchApplyDocData.apply.map((items) => {
+                                firestore.collection('exchange_form').doc(`${items.Apply_docID}`).get().then(
+                                    querySnapshot => {
+                                        let applydocID = querySnapshot.id;
+                                        let applydocData = querySnapshot.data();
+                                        applydocData.docID = applydocID;
+                                        // applyDataArray.push(applydocData);
+                                        decideData.push({ data, apply: [applydocData] })
+                                        dispatch({ type: 'GET_USER_APPLICATION_DATA_WAIT_RESPONSE', decideData })
+                                        console.log(decideData)
+                                    }
+                                )
+                            })
                         }
                     )
-                    // console.log(decideFulldocData)
-                    // console.log(matchApplyDocData, '透過集合抓到的資料');
-                    // console.log(matchApplyDocData.apply, 'apply的那個陣列')
-                    matchApplyDocData.apply.map((item) => {
-                        console.log(item.Apply_docID)
-                        renderDocList.push(item.Apply_docID);
-                    })
-                    // console.log(renderDocList, 'All Apply docID,提出申請的文件，因為資料集合就包含使用者，所以沒有user-id也沒關係')
-                    // 這邊要針對 全部 的文件去搜尋
-                    for (let i = 0; i < renderDocList.length; i++) {
-                        firestore.collection('exchange_form').doc(`${renderDocList[i]}`).get().then(
-                            querySnapshot => {
-                                let applydocID = querySnapshot.id;
-                                let applydocData = querySnapshot.data();
-                                // 這行是要直接推到物件裡面
-                                applydocData.docID = applydocID;
-                                renderFulldocData.push(applydocData);
-                                dispatch({ type: 'GET_USER_APPLICATION_DATA_WAIT_RESPONSE', renderFulldocData,matchApplyDocData,decideFulldocData })
-                            }
-
-                            
-                        // ).then(() => {
-                        //     dispatch({ type: 'GET_USER_APPLICATION_DATA_WAIT_RESPONSE', renderFulldocData, matchApplyDocData, decideFulldocData })
-                        //     console.log(renderFulldocData, matchApplyDocData, decideFulldocData)
-                        // })
-                        )}
                 })
             }
         )
@@ -137,7 +122,7 @@ export const AgreeOrRefuseBtn = (responseResult) => {
         if (result === true) {
             firestore.collection('exchange_form').doc(`${DocID}`).update({ initialChangeState: 2 })
             firestore.collection('exchange_form').doc(`${decideDocID}`).update({ initialChangeState: 2 })
-        }else{
+        } else {
             firestore.collection('exchange_form').doc(`${DocID}`).update({ initialChangeState: 3 })
             firestore.collection('exchange_form').doc(`${decideDocID}`).update({ initialChangeState: 3 })
         }
