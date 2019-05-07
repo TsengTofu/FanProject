@@ -1,9 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import firebase from "./config/firebaseConfig";
 import { Link,Redirect } from 'react-router-dom';
 // 組件
-
 
 // css part
 import './Menu.css';
@@ -32,7 +30,6 @@ class Menu extends React.Component {
 				<div className="menuList">
 					<Link to='/'>
 						<div className="logo_no_light">
-						{/* <b><i className="fas fa-ticket-alt"></i>  F<span>in</span>d<span> Tic</span>ket</b> */}
 							<img src={logo} alt=""/>
 						</div>
 					</Link>
@@ -50,11 +47,4 @@ class Menu extends React.Component {
 		);
 	}
 }
-
-
-
-
-
-
-
 export default Menu;

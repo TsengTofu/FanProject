@@ -1,5 +1,5 @@
-/* 這邊目前都是首頁的css */
-body{
+/* All css */
+body,#root{
   background: #000;
   font-family:"微軟正黑體";
   margin:0 auto;
@@ -27,10 +27,6 @@ a{
   box-sizing:border-box;
 }
 
-
-
-
-
 /* input WebFonts */
 @font-face {
   font-family: 'Baloo Bhaijaan Regular';
@@ -38,6 +34,14 @@ a{
   font-weight: normal;
   src:url('/BalooChettan-Regular.woff') format('woff');
 }
+
+
+
+
+
+
+
+
 
 
 

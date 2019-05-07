@@ -321,13 +321,9 @@ class ChangeFormPopUp extends React.Component {
       return false;
     });
 
-    // console.log(this.props.profile.phone_number);
-    // console.log(this.props.auth.uid);
-    // console.log(this.props.auth.email);
     console.log(this.props.profile.user_name)
     return (
       <div>
-
         <div className="change_btn" onClick={() => this.openModal()}>我要交換 <i className="fas fa-chevron-right"></i></div>
         <Popup
           open={this.state.open}

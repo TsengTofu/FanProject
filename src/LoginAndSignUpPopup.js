@@ -36,7 +36,7 @@ class LoginAndSignUpPopup extends React.Component {
             onClose={this.closeModal}
 
           >
-            <div>
+            <div className="login_and_signup_wrap_popup"> 
               <Login/>
               <SignUp/>
             </div>          
