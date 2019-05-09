@@ -16,19 +16,6 @@ class Login extends React.Component {
     this.state = { email: '', password: '' };
     this.handleLogin = this.handleLogin.bind(this);
   }
-  // async handleLogin(e) {
-  //   e.preventDefault();
-  //   const { email, password } = this.state;
-  //   try {
-  //     await firebase.auth().signInWithEmailAndPassword(email, password);
-  //     this.props.history.push('/');
-  //     console.log(`登入成功+${this.state.email}+${this.state.password}`);
-  //     console.log(firebase.auth().currentUser);
-  //     // 這行可以抓到目前的使用者，但沒辦法顯示使用者的名稱
-  //   } catch (error) {
-  //     alert(error);
-  //   }
-  // }
 
   handleLogin(e){
     e.preventDefault();
