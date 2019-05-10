@@ -85,7 +85,6 @@ class ChangeFormPopUp extends React.Component {
     this.props.concerDataAll.map((item, index) => {
       if (e.target.value === item.name) {
         this.setState({ ConcertPlace: item.place });
-        // console.log(item.place)
         this.setState({ queryConcertID: item.concert_id });
       }
       return false;
@@ -101,7 +100,6 @@ class ChangeFormPopUp extends React.Component {
   changeName(e) {
     this.setState({ selectName: e.target.value });
     this.props.formdata.map((item, index) => {
-      // console.log(item.name,index)
       if (e.target.value === item.name) {
         // console.log(item.name,item.price[0])
         this.setState({ selectPrice: item.price[0] });

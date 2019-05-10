@@ -12,7 +12,7 @@ const authReducer = (state = initState,action) =>{
             console.log('登入失敗')
             return {
                 ...state,
-                authError:'登入失敗'           
+                authError:'帳號或密碼錯誤，請重新輸入。'           
             }
         
         case 'LOGIN_SUCCESS':

@@ -25,10 +25,6 @@ export const createEXChangeFormData = (changeFormData) => {
             // queryContcetID >>> concertID 這段可以這樣改寫
             // let concertID = changeFormData.queryConcertID;
             // let exChangeArea = changeFormData.exChangeSelectArea;
-            // let exChangePrice = changeFormData.exChangeSelectPrice;
-            // let holdArea = changeFormData.selectName;
-            // let holdPrice = changeFormData.selectPrice;
-            // let dataUser = changeFormData.user_id;
 
             // 宣告儲存要 render 資料的陣列 orederby 處理最新的資料排序
             // limit 可以控制資料量 大概就是排序 然後最新的100筆這樣
@@ -39,7 +35,6 @@ export const createEXChangeFormData = (changeFormData) => {
                     let matchDocData = doc.data();
                     if (doc.data().user_id !== `${dataUser}`) {
                         matchDocData.docID = matchDocID;
-                        // 把ID加到同一個陣列裡面
                         renderMatchListData.push(matchDocData);
                     }
                 })

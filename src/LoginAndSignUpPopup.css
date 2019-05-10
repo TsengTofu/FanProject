@@ -10,49 +10,96 @@
     border: 2px solid #fff;
 }
 
-.popup-content {
-    widows: 65% !important;
+.topBNContainer .popup-content {
+    width: 20% !important;
     border-radius: 5px;
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    padding: 0px !important;
 }
 
 .popup-content div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 1.4vw;
 }
 
-.signup_form, .login_form {
+.login_and_signup_wrap_popup{
+    position: relative;
+}
+
+.switch_button{
+    display: flex;
+    width: 100%;
+    top:0;
+    background: #888;
+}
+
+.tab_template{
+    border-style:none;
+    cursor: pointer;
     width: 50%;
+    font-size:18px;
+    padding: 10px;
+    font-family: "微軟正黑體"; 
+}
+
+
+.signup_form, .login_form {
+    width:100%;
     padding: 10px;
     box-sizing: border-box;
 }
 
+.signup_form label, .login_form label{
+    font-size: 16px;
+    width: 20%;
+}
+
+
 .signup_form input, .login_form input {
-    width: 80%;
+    width: 75%;
     border-radius: 5px;
     border: solid 1px #888;
+    padding: 0 5px;
 }
 
 .signup_form div, .login_form div {
+    display: flex;
     margin: 2%;
+    flex-direction: row;
+}
+
+.email_title img, .password_title img, .phone_title img,.user_title img{
+    width:30%;
 }
 
 .signup_form button, .login_form button {
-    background: #000;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
     color: #fff;
     border-style: none;
     font-weight: bold;
-    font-size: 1.6vw;
+    font-size: 22px;
     border-radius: 5px;
     font-family: "微軟正黑體";
-    width: 45%;
+    width: 80%;
+    margin:10px auto;
 }
 
 .signup_form button:hover, .login_form button:hover {
-    background: #eee;
+    background-image: linear-gradient(to left, #434343 0%, black 100%);
 }
+
+.some_reminder,.errorMsg,.some_reminder p{
+    font-size: 12px;
+    margin:0 auto;
+    line-height: 1.5;
+}
+
+
+
+
+
+
 
 /* 立即加入按鈕 */
 

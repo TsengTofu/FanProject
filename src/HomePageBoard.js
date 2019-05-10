@@ -1,10 +1,7 @@
-// 首頁的全部申請表單
+// 首頁的全部申請表單 這邊還沒做完
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router';
-
 // css part
-
 
 // import action
 // import { createupComingEvent } from './store/actions/upComingEventAction'

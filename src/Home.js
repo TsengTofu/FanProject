@@ -6,7 +6,6 @@ import SearchBar from './SearchBar'
 import UpComingEvents from './upComingEvents'
 import HomePageBoard from './HomePageBoard'
 
-
 // css part
 import '../src/Home.css';
 

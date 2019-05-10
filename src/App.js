@@ -52,12 +52,10 @@ class App extends React.Component {
 				
 				<Route path="/entry" render={() => !authenticated ? (<Logo />) : (<Redirect to="/" />)} />
 				<Route exact path="/" render={() => authenticated ? (<Home />) : (<Redirect to="/entry" />)} />
-				{/* <Route exact path={/^(?!.*entry).*$/} render={() =><Menu/>} /> */}
 				<Route path={['/renderMatch', '/member_profile','/']} render={() => !authenticated ? null : (<Menu/>)}  />
 				<Switch>
 					<Route path="/renderMatch" component={RenderMatch} />
 					<Route path="/member_profile" render={() => authenticated ? (<MemberProfile />) : null} />
-					{/* <Route path="/search_match_result"  component={RenderMatch} /> */}
 				</Switch>
 				<Route path={['/renderMatch', '/member_profile','/']} render={() => !authenticated ? null : (<BackToTop scrollStepInPx="50" delayInMs="16.66" />)}  />
 				<Route path={['/renderMatch', '/member_profile','/']} render={() => !authenticated ? null : (<Footer/>)}  />

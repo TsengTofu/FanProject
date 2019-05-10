@@ -32,7 +32,7 @@ const store = createStore(rootReducer,
                 userProfile:'users',
                 attachAuthIsReady:true}
             )
-        // 後面這個是要去偵測登入的狀態
+        // 偵測登入的狀態
     ));
 
 

@@ -136,12 +136,12 @@
     width: 22%; 
  }
  
+ .menu-trigger{
+     display: none;
+ }
 
  /* RWD */
  @media screen and (max-width: 1200px) {
-    /* .logo_no_light{
-        width: 40%;
-    } */
 
     .right_nav{
         width: 60%;
@@ -153,3 +153,11 @@
 }
 
 
+
+
+@media screen and (max-width: 768px) {
+    .menu-trigger{
+        display: block;
+    }
+    
+}

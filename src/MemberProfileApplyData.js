@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 // action
 import { deleteUserApplyData } from './store/actions/GetUserFormDataAction'
+import { searchDataAgainBtn } from './store/actions/GetUserFormDataAction'
 
 // css part
 import './MemberProfileApplyData.css'
@@ -12,6 +13,7 @@ import './MemberProfileApplyData.css'
 class MemberProfileApplyData extends React.Component {
     constructor(props) {
         super(props);
+        
     }
 
     // 刪除交換文件的功能
@@ -20,6 +22,14 @@ class MemberProfileApplyData extends React.Component {
         let deleteApply = e.currentTarget.getAttribute("data-docid");
         alert('申請文件已刪除');
         this.props.deleteUserApplyData(deleteApply);
+    }
+
+    // 重新搜索的功能
+    handleSearch(e){
+        e.preventDefault();
+        // action
+        this.props.searchDataAgainBtn();
+
     }
 
     render() {
@@ -72,14 +82,17 @@ class MemberProfileApplyData extends React.Component {
                                 data-docid={itemDocID}>
                                 <i className="fas fa-times"></i> 刪除
                             </button>
-                            <button className="searchAgain">
-                            <i className="fas fa-search"></i> 搜尋
+                            <button className="searchAgain"
+                                onClick={this.handleSearch.bind(this)}
+                                data-
+                            >
+                                <i className="fas fa-search"></i> 搜尋
                             </button>
-                        </div> 
+                        </div>
                         || itemData.initialChangeState === 2 &&
                         <div className="bottom_buttons">
                             <p>已結案</p>
-                        </div> 
+                        </div>
                     }
                 </li>
             )
@@ -101,7 +114,7 @@ class MemberProfileApplyData extends React.Component {
 
 function mapDispatchToProps(dispatch) {
     return ({
-        deleteUserApplyData: (deleteApply) => dispatch(deleteUserApplyData(deleteApply))
+        deleteUserApplyData: (deleteApply) => dispatch(deleteUserApplyData(deleteApply)),searchDataAgainBtn:()=>dispatch(searchDataAgainBtn())
     })
 }
 

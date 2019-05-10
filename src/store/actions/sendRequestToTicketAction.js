@@ -76,14 +76,12 @@ export const getAllApplyDataToSpecificUser = (getAllApplyData) => {
                         querySnapshot => {
                             let data = querySnapshot.data();
                             data.docID = matchApplyDocID;
-                            // decideData.push(data);
                             matchApplyDocData.apply.map((items) => {
                                 firestore.collection('exchange_form').doc(`${items.Apply_docID}`).get().then(
                                     querySnapshot => {
                                         let applydocID = querySnapshot.id;
                                         let applydocData = querySnapshot.data();
                                         applydocData.docID = applydocID;
-                                        // applyDataArray.push(applydocData);
                                         decideData.push({ data, apply: [applydocData] })
                                         dispatch({ type: 'GET_USER_APPLICATION_DATA_WAIT_RESPONSE', decideData })
                                         console.log(decideData)
@@ -104,8 +102,6 @@ export const getAllApplyDataToSpecificUser = (getAllApplyData) => {
 export const AgreeOrRefuseBtn = (responseResult) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         const firestore = getFirestore();
-        console.log('只要執行一次就會看到我XD')
-
         // console.log(responseResult, '回傳的資料');
         // console.log(responseResult.decideDocID, '要決定的那個文件ID');
         // console.log(responseResult.DocID, '被接受或拒絕的文件ID');
