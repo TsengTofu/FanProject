@@ -9,54 +9,56 @@ export const exChangeApplyBtn = (applyData, DecideData) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         const firebase = getFirebase();
         const firestore = getFirestore();
-        console.log(applyData, DecideData,'如果你看到我就揮揮手')
-
-        // applyData.applySearch_docID
-        // applyData.applySearch_userID
-
-        // 判斷apply是否存在嗎 
-
-
-
-        // const applyWho = getState().firebase.auth.uid;
-        // console.log(`${applyWho}`, '目前正在搜索的會員');
-        // console.log(applyData.Apply_userID,'申請者的ID')
-        // console.log(applyData.Apply_docID,'申請者的文件ID')
-
-        // console.log(DecideData.deciderUserID,'被申請者的ID')
-        // console.log(DecideData.deciderDocID,'被申請者的文件ID，是他要變成集合名稱')
-        // 申請者的陣列
-        // [{docID:xxx,userID:xxx},{docID:xxx,userID:xxx}]
-        let apply = [];
-        let applyuserID = applyData.Apply_userID;
-        let applydocID = applyData.Apply_docID;
-        let deciderDocID = DecideData.deciderDocID;
-        // 先抓到申請的那個文件，把狀態改成 1
-        firestore.collection('exchange_form').doc(`${applydocID}`).update({ initialChangeState: 1 }).then(console.log(`${applydocID}`, '這份文件已經initialChangeState已經改成1囉'))
-        // 這邊抓到各自的資料
-        // 目的是索引，可以限制搜索的範圍，不用再去搜索全部的 exchange_form
-
-        // 如果 ApplicationForm_context 裡面的 找的到對應的 doc 就update array [] 
-        firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).get().then(docSnapshot => {
-            if (docSnapshot.exists) {
-                firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).update({
-                    apply: firestore.FieldValue.arrayUnion({ Apply_userID: applyuserID, Apply_docID: applydocID })
-                }).then(() => {
-                    dispatch({ type: 'CREATE_APPLY_DATA_BOTH_USER', apply, DecideData })
-                    // window.location.hash = '/member_profile';
-                })
-            } else {
-                apply.push(applyData);
-                console.log(apply, '這是文件不存在的狀況!!!')
-                firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).set({
-                    apply,
-                    ...DecideData
-                }).then(() => {
-                    dispatch({ type: 'CREATE_APPLY_DATA_BOTH_USER', apply, DecideData })
-                    // window.location.hash = '/member_profile';
-                })
-            }
-        });
+        if (applyData.applySearch_docID) {
+            let apply = [];
+            let applyuserID = applyData.applySearch_userID;
+            let applydocID = applyData.applySearch_docID;
+            let deciderDocID = DecideData.deciderDocID;
+            // 申請的文件，把狀態改成 1
+            firestore.collection('exchange_form').doc(`${applydocID}`).update({ initialChangeState: 1 })
+            firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).get().then(docSnapshot => {
+                if (docSnapshot.exists) {
+                    firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).update({
+                        apply: firestore.FieldValue.arrayUnion({ Apply_userID: applyuserID, Apply_docID: applydocID })
+                    }).then(() => {
+                        dispatch({ type: 'CREATE_APPLY_DATA_BOTH_USER', apply, DecideData })
+                    })
+                } else {
+                    apply.push(applyData).then(()=>{
+                        firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).set({
+                                apply,
+                                ...DecideData
+                            }).then(() => {
+                                dispatch({ type: 'CREATE_APPLY_DATA_BOTH_USER', apply, DecideData })
+                            })
+                    })
+                }
+            })
+        } else {
+            let apply = [];
+            let applyuserID = applyData.Apply_userID;
+            let applydocID = applyData.Apply_docID;
+            let deciderDocID = DecideData.deciderDocID;
+            firestore.collection('exchange_form').doc(`${applydocID}`).update({ initialChangeState: 1 })
+            // 如果 ApplicationForm_context 裡面的 找的到對應的 doc 就update array [] 
+            firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).get().then(docSnapshot => {
+                if (docSnapshot.exists) {
+                    firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).update({
+                        apply: firestore.FieldValue.arrayUnion({ Apply_userID: applyuserID, Apply_docID: applydocID })
+                    }).then(() => {
+                        dispatch({ type: 'CREATE_APPLY_DATA_BOTH_USER', apply, DecideData })
+                    })
+                } else {
+                    apply.push(applyData);
+                    firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).set({
+                        apply,
+                        ...DecideData
+                    }).then(() => {
+                        dispatch({ type: 'CREATE_APPLY_DATA_BOTH_USER', apply, DecideData })
+                    })
+                }
+            })
+        }
     }
 }
 
