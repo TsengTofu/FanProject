@@ -9,6 +9,15 @@ export const exChangeApplyBtn = (applyData, DecideData) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         const firebase = getFirebase();
         const firestore = getFirestore();
+        console.log(applyData, DecideData,'如果你看到我就揮揮手')
+
+        // applyData.applySearch_docID
+        // applyData.applySearch_userID
+
+        // 判斷apply是否存在嗎 
+
+
+
         // const applyWho = getState().firebase.auth.uid;
         // console.log(`${applyWho}`, '目前正在搜索的會員');
         // console.log(applyData.Apply_userID,'申請者的ID')

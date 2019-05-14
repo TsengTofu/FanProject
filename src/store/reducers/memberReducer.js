@@ -1,6 +1,8 @@
 const initState = {
     memberFormData:'',
-    deleteApply:''
+    deleteApply:'',
+    searchAgainData:'',
+    renderMatchListData_search:''
 }
 
 const memberReducer = ( state = initState , action ) =>{
@@ -15,8 +17,7 @@ const memberReducer = ( state = initState , action ) =>{
             }
 
         case 'DELETE_USER_APPLY_DATA_IN_MEMBERPAGE':
-            // 刪除 memberpage 裡面的最開始填表的資料 
-            // console.log();
+            // 刪除 memberpage 裡面的最開始填表的資料
             return{
                 ...state,
                 memberFormData:action.userApplyData,
@@ -26,10 +27,10 @@ const memberReducer = ( state = initState , action ) =>{
         
         case 'SEARCH_AGAIN_BUTTON':
         // 再次搜索的功能
-        console.log()
             return{
                 ...state,
-
+                searchAgainData:action.searchAgainData,
+                renderMatchListData_search:action.renderMatchListData_search
             }
 
         default:

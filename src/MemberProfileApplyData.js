@@ -13,7 +13,6 @@ import './MemberProfileApplyData.css'
 class MemberProfileApplyData extends React.Component {
     constructor(props) {
         super(props);
-        
     }
 
     // 刪除交換文件的功能
@@ -25,15 +24,26 @@ class MemberProfileApplyData extends React.Component {
     }
 
     // 重新搜索的功能
-    handleSearch(e){
+    handleSearch(e) {
         e.preventDefault();
-        // action
-        this.props.searchDataAgainBtn();
+        // 把資料提交回去
+        let docID = e.currentTarget.getAttribute("data-docid");
+        let userID = e.currentTarget.getAttribute("data-userid");
+        let selectName = e.currentTarget.getAttribute("data-select-name");
+        let selectPrice = e.currentTarget.getAttribute("data-select-price");
+        let exChangeSelectArea = e.currentTarget.getAttribute("data-exchange-name");
+        let exChangeSelectPrice = e.currentTarget.getAttribute("data-exchange-price");
+        let queryConcertID = e.currentTarget.getAttribute("data-queryconcert");
 
+        let searchAgainData = { docID: docID, userID: userID, selectName: selectName, selectPrice: selectPrice, exChangeSelectArea: exChangeSelectArea, exChangeSelectPrice: exChangeSelectPrice, queryConcertID: queryConcertID }
+        this.props.searchDataAgainBtn(searchAgainData);
     }
 
+
+
+
     render() {
-        // 可以抓到父層的資料 在父層插入的子組件要記得寫data={this.props} const這層宣告一定要寫
+        // 可以抓到父層的資料 在父層插入的子組件要記得寫data={this.props} const宣告必寫
         const { data } = this.props;
         console.log(typeof (data.memberFormData));
         const info = data.memberFormData && data.memberFormData.map((item, index) => {
@@ -49,7 +59,6 @@ class MemberProfileApplyData extends React.Component {
             } else {
                 exChangeStatus = '拒絕'
             }
-            // 交換方式要轉換成中文
             let exChangeWay = itemData.changeWay;
             if (exChangeWay === 'send_package') { exChangeWay = '郵寄' }
             else if (exChangeWay === 'face_to_face') {
@@ -84,7 +93,13 @@ class MemberProfileApplyData extends React.Component {
                             </button>
                             <button className="searchAgain"
                                 onClick={this.handleSearch.bind(this)}
-                                data-
+                                data-docid={itemDocID}
+                                data-userid={itemData.user_id}
+                                data-select-name={itemData.selectName}
+                                data-select-price={itemData.selectPrice}
+                                data-exchange-name={itemData.exChangeSelectArea}
+                                data-exchange-price={itemData.exChangeSelectPrice}
+                                data-queryconcert={itemData.queryConcertID}
                             >
                                 <i className="fas fa-search"></i> 搜尋
                             </button>
@@ -114,7 +129,7 @@ class MemberProfileApplyData extends React.Component {
 
 function mapDispatchToProps(dispatch) {
     return ({
-        deleteUserApplyData: (deleteApply) => dispatch(deleteUserApplyData(deleteApply)),searchDataAgainBtn:()=>dispatch(searchDataAgainBtn())
+        deleteUserApplyData: (deleteApply) => dispatch(deleteUserApplyData(deleteApply)), searchDataAgainBtn: (searchAgainData) => dispatch(searchDataAgainBtn(searchAgainData))
     })
 }
 
