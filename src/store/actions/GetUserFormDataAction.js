@@ -52,7 +52,6 @@ export const searchDataAgainBtn = (searchAgainData) => {
             selectPrice: selectPrice,
             userID: userID
         } = searchAgainData;
-        console.log(userID, '看看有沒有抓到');
         const firestore = getFirestore();
         // 這邊重複地宣告
         let renderMatchListData_search = [];
@@ -72,9 +71,7 @@ export const searchDataAgainBtn = (searchAgainData) => {
                 )
                 dispatch({
                     type: 'SEARCH_AGAIN_BUTTON',
-                    // 搜到的結果資料
-                    renderMatchListData_search,searchAgainData
-                    // 這邊要多一個資料
+                    renderMatchListData_search, searchAgainData
                 })
                 if (renderMatchListData_search.length !== 0) {
                     window.location.hash = '/renderMatch';
