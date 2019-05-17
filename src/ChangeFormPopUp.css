@@ -60,7 +60,7 @@
   width: 100%;
   border-style: none;
   border-radius: 5px;
-  border: 1px solid #888;
+  /* border: 1px solid #888; */
   padding: 2px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -68,6 +68,7 @@
 
 .change_form textarea {
   resize: none;
+  border: none;
 }
 
 .change_form .checkbox_style {
@@ -105,7 +106,7 @@ width: 64%;
 .change_form .file_upload{
   border: none;
   color: transparent;
-  height: 100px;
+  height: 80px;
 }
 
 .file_upload::-webkit-file-upload-button{
@@ -117,18 +118,18 @@ width: 64%;
   color:#fff;
   width: 45%;
   border-radius: 5px;
-  margin: 20px auto 5px;
+  margin: 12px auto 0;
   padding: 4px 0;
   letter-spacing: 2px;
   
 }
 
 .select_file{
-  height: 100px;
+  height: 80px;
   box-sizing: border-box;
   width: 100%;
   text-align: center;
-  border:2px solid #000;
+  border:1px solid rgba(255, 255, 255,0);
   border-radius: 5px;
   background: #fff;
   cursor: pointer;
@@ -136,8 +137,18 @@ width: 64%;
   top:0;
 }
 
+.select_file:hover{
+  border:1px solid rgba(54, 53, 53,1);
+}
+
 .select_file span{
   font-size: 14px; 
+  
+}
+
+.check_box_txt{
+  text-align: center;
+  margin: 2% auto;
 }
 
 .ChangeFormSubmit {

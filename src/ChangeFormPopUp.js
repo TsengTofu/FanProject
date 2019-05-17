@@ -401,7 +401,7 @@ class ChangeFormPopUp extends React.Component {
                   </div>
 
                 </label>
-                <p>
+                <p className="check_box_txt">
                   <input type="checkbox" className="checkbox_style" checked={this.state.isChecked} onChange={this.toggleChange} required />
                   請再次確認填寫資訊，確認無誤後再送出。
                       </p>
