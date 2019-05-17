@@ -332,7 +332,7 @@ class ChangeFormPopUp extends React.Component {
                 <p>{this.props.name}</p>
                 <div className="data_block">
                   <label htmlFor="inputform_concertName">
-                    <i className="fas fa-microphone"></i> 演唱會名稱</label>
+                    <i className="fas fa-microphone"></i> 演唱會</label>
                   <select value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
                     <option value="">請選擇</option>
                     {concertName}
@@ -382,7 +382,7 @@ class ChangeFormPopUp extends React.Component {
                 </div>
                 <div className="data_block">
                   <label htmlFor="price_spread" className="price_spread">
-                  <i className="fas fa-comments-dollar"></i> 票券價差｜{this.state.pricePlusTag + this.state.priceSpread}</label>
+                    <i className="fas fa-comments-dollar"></i> 票券價差｜{this.state.pricePlusTag + this.state.priceSpread}</label>
                 </div>
                 <div className="data_block" onChange={this.handleChangeValue.bind(this)}>
                   <p><i className="fas fa-address-card"></i> 聯絡資訊｜</p>
@@ -391,11 +391,15 @@ class ChangeFormPopUp extends React.Component {
                 </div>
                 <div className="data_block">
                   <label htmlFor="ps_text"><i className="fas fa-comment-dots"></i> 備註</label>
-                  <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required></textarea>
+                  <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required placeholder="說些什麼吧"></textarea>
                 </div>
-                <label>
-                  <input type="file" url={this.state.url} id="filepath" onChange={this.handleImageUpload.bind(this)} />
-                  <p>上傳的圖檔請小於2MB，謝謝！</p>
+                <label className="upload_block">
+                  <input type="file" className="file_upload" url={this.state.url} id="filepath" onChange={this.handleImageUpload.bind(this)} />
+                  <div className="select_file">
+                    <p><i className="fa fa-download" aria-hidden="true"></i> 上傳票券照片</p>
+                    <span>上傳的圖檔請小於2MB，謝謝！</span>
+                  </div>
+
                 </label>
                 <p>
                   <input type="checkbox" className="checkbox_style" checked={this.state.isChecked} onChange={this.toggleChange} required />

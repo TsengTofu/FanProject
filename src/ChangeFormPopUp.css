@@ -95,6 +95,50 @@ width: 64%;
   width: 100%;
 }
 
+/* 上傳票券的按鈕 */
+.upload_block{
+  position: relative;
+  width: 100%;
+  
+}
+
+.change_form .file_upload{
+  border: none;
+  color: transparent;
+  height: 100px;
+}
+
+.file_upload::-webkit-file-upload-button{
+  visibility: hidden;
+}
+
+.select_file p{
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color:#fff;
+  width: 45%;
+  border-radius: 5px;
+  margin: 20px auto 5px;
+  padding: 4px 0;
+  letter-spacing: 2px;
+  
+}
+
+.select_file{
+  height: 100px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  border:2px solid #000;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  position: absolute;
+  top:0;
+}
+
+.select_file span{
+  font-size: 14px; 
+}
 
 .ChangeFormSubmit {
   border-style: none;
@@ -115,10 +159,12 @@ width: 64%;
   background-image: linear-gradient(to left, #434343 0%, black 100%);
 }
 
-@media screen and (max-width:1200px) {
-  .popup-content {
-    /* width: */
-  }
+
+
+@media screen and (max-width:1830px) {
+  /* .topContent .popup-content {
+    width:35% !important;
+  } */
 }
 
 @media screen and (max-width:768px) {}
