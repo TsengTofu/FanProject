@@ -1,7 +1,7 @@
 /* 表單css */
 
 .topContent .popup-content {
-  width: 30% !important;
+  width: 28% !important;
   font-weight: bold;
 }
 
@@ -45,7 +45,7 @@
 .change_form .data_block {
   display: flex;
   width: 100%;
-  margin:5px 0;
+  margin: 5px 0;
 }
 
 .change_form .data_block label, .change_form .data_block select {
@@ -83,9 +83,18 @@
   width: 50%;
 }
 
-.hold_place_block label, .hold_place_block select, .change_way_block label, .change_way_block select {
-  width: 50%;
+.hold_place_block label, .change_way_block label {
+  width: 36%;
 }
+
+.hold_place_block select, .change_way_block select {
+width: 64%;
+}
+
+.change_form .data_block .price_spread{
+  width: 100%;
+}
+
 
 .ChangeFormSubmit {
   border-style: none;

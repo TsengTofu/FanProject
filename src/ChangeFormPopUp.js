@@ -328,12 +328,11 @@ class ChangeFormPopUp extends React.Component {
           <div className="change_form_all">
             <p className="form_title" >TICKET EX-CHANGE FORM</p>
             <div className="change_form">
-              {/* <div className="form_img"><img src={form_Illustration}/></div> */}
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <p>{this.props.name}</p>
                 <div className="data_block">
                   <label htmlFor="inputform_concertName">
-                    <i className="fas fa-music"></i> 演唱會名稱</label>
+                    <i className="fas fa-microphone"></i> 演唱會名稱</label>
                   <select value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
                     <option value="">請選擇</option>
                     {concertName}
@@ -342,7 +341,7 @@ class ChangeFormPopUp extends React.Component {
                 <div className="place_and_change">
                   <div className="hold_place_block">
                     <label htmlFor="hold_area">
-                    <i className="fas fa-map-marker-alt"></i> 舉行地點</label>
+                      <i className="fas fa-map-marker-alt"></i> 舉行地點</label>
                     <select value={this.state.ConcertPlace} onChange={this.changeConcertPlace.bind(this)}>
                       <option value="">請選擇</option>
                       {concertPlace}
@@ -382,16 +381,16 @@ class ChangeFormPopUp extends React.Component {
                   </select>
                 </div>
                 <div className="data_block">
-                  <label htmlFor="price_spread">票券價差<span className="spread_total">
-                    {this.state.pricePlusTag + this.state.priceSpread}</span></label>
+                  <label htmlFor="price_spread" className="price_spread">
+                  <i className="fas fa-comments-dollar"></i> 票券價差｜{this.state.pricePlusTag + this.state.priceSpread}</label>
                 </div>
                 <div className="data_block" onChange={this.handleChangeValue.bind(this)}>
-                  <p>聯絡資訊｜</p>
-                  <p>{this.props.profile.user_name}　<span>{this.props.profile.phone_number}</span></p>
-                  <p>　{this.state.email}</p>
+                  <p><i className="fas fa-address-card"></i> 聯絡資訊｜</p>
+                  <p>{this.props.profile.user_name}／<span>{this.props.profile.phone_number}</span></p>
+                  <p>／{this.state.email}</p>
                 </div>
                 <div className="data_block">
-                  <label htmlFor="ps_text">備註</label>
+                  <label htmlFor="ps_text"><i className="fas fa-comment-dots"></i> 備註</label>
                   <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required></textarea>
                 </div>
                 <label>
