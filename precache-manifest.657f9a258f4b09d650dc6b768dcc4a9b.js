@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c70d53571cb6ecaa9bc0",
-    "url": "/FanProject/static/css/main.eebc96b4.chunk.css"
+    "revision": "c5475538ef6ee08357a9",
+    "url": "/FanProject/static/css/main.92f97e1e.chunk.css"
   },
   {
-    "revision": "c70d53571cb6ecaa9bc0",
-    "url": "/FanProject/static/js/main.04130a4a.chunk.js"
+    "revision": "c5475538ef6ee08357a9",
+    "url": "/FanProject/static/js/main.8737309b.chunk.js"
   },
   {
     "revision": "4f1e38c2fba6b06770ff",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/FanProject/static/media/Concert_bg.3b7912f1.jpg"
   },
   {
-    "revision": "7ae9d7eabe496813b4315ed4c3b27029",
+    "revision": "115f9fc04b684c2d0df00061a2e47390",
     "url": "/FanProject/index.html"
   }
 ];
