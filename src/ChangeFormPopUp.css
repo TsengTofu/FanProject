@@ -1,69 +1,113 @@
-.wrap_popup{
-    width:60%;
-    margin:0 auto;
-    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+/* 表單css */
+
+.topContent .popup-content {
+  width: 35% !important;
+}
+
+.wrap_popup form div, .wrap_popup form p {
+  font-size: 1vw;
+  margin: 10px auto;
+}
+
+.change_form_all {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.form_title {
+  font-size: 1.2vw;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.change_form .form_img {
+  width: 50%;
+}
+
+.change_form {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  box-sizing: border-box;
+  display: block !important;
+}
+
+.change_form form {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.change_form .data_block {
+  display: flex;
+  width: 100%;
+}
+
+.change_form .data_block label, .change_form .data_block select{
+  width:30%;
+}
+
+.change_form .data_block select{
+  width:35%;
+}
+
+.change_form select, .change_form input, .change_form textarea {
+  width: 100%;
+  border-style: none;
+  border-radius: 5px;
+  border: 1px solid #888;
+  padding: 2px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.change_form .checkbox_style {
+  width: 5%;
+}
+
+.place_and_change {
+  display: flex;
+}
+
+.hold_place_block, .change_way_block {
+  display: flex;
+  width: 50%;
+}
+
+.hold_place_block label, .hold_place_block select, .change_way_block label, .change_way_block select {
+  width: 50%;
+}
+
+.ChangeFormSubmit {
+  border-style: none;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  width: 100%;
+  padding: 10px 0px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-bottom: 8px solid #000;
+}
+
+.ChangeFormSubmit:hover {
+  background-image: linear-gradient(to left, #434343 0%, black 100%);
+}
+
+@media screen and (max-width:1200px) {
+  .popup-content {
+    /* width: */
   }
-  
-  /* 表單css */
-  .wrap_popup form div,.wrap_popup form p{
-    font-size: 1vw;
-    margin:10px auto;
-  }
-  
-  .change_form_all{
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    margin: 0 auto;
-    border-radius:5px;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  
-  .form_title{
-    font-size: 1.2vw;
-    font-weight: bold;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    color: #fff;
-    border-radius:5px 5px 0 0;
-    padding:10px;
-    width: 100%;
-  }
-  
-  .change_form .form_img{
-    width: 50%;
-  }
-  
-  .change_form{
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    padding:20px;
-  }
-  
-  .change_form select,.change_form input, .change_form textarea{
-    border-style: none;
-    border-radius:5px;
-    border:1px solid #888;
-    padding: 2px;
-    line-height: 1.5;
-  }
-  
-  .ChangeFormSubmit{
-    border-style:none;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    color:#fff;
-    font-size: 1.2vw;
-    font-weight: bold;
-    font-family: "微軟正黑體";
-    width: 100%;
-    padding:10px 0px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    border-radius:5px;
-    border-bottom:8px solid #000;
-  }
-  
-  .ChangeFormSubmit:hover{
-    background-image: linear-gradient(to left, #434343 0%, black 100%);
-  }
+}
+
+@media screen and (max-width:768px) {}

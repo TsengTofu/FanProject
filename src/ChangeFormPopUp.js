@@ -186,12 +186,9 @@ class ChangeFormPopUp extends React.Component {
   // 提交表單
   handleSubmit(e) {
     e.preventDefault();
-    // 下面要寫create提交表單資料的action
+    // create提交表單資料的action
     alert("表單已送出，感謝您的填寫！");
     this.props.createEXChangeFormData(this.state);
-    // this.props.createEXChangeFormData(this.state, () => {
-    //   this.props.history.push("/renderMatch");
-    // });
   }
 
   // checkbox
@@ -328,26 +325,28 @@ class ChangeFormPopUp extends React.Component {
           closeOnDocumentClick
           onClose={() => this.closeModal()}
           contentStyle={popUpStyle}>
-          <div className="wrap_popup">
-            <div className="change_form_all">
-              <p className="form_title" >TICKET EX-CHANGE FORM</p>
-              <div className="change_form">
-                {/* <div className="form_img"><img src={form_Illustration}/></div> */}
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                  <p>{this.props.name}</p>
-                  <div>
-                    <label htmlFor="inputform_concertName">演唱會名稱　</label>
-                    <select value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
-                      <option value="">請選擇</option>
-                      {concertName}
-                    </select>
-                  </div>
-                  <div>
+          <div className="change_form_all">
+            <p className="form_title" >TICKET EX-CHANGE FORM</p>
+            <div className="change_form">
+              {/* <div className="form_img"><img src={form_Illustration}/></div> */}
+              <form onSubmit={this.handleSubmit.bind(this)}>
+                <p>{this.props.name}</p>
+                <div className="data_block">
+                  <label htmlFor="inputform_concertName">演唱會名稱　</label>
+                  <select value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
+                    <option value="">請選擇</option>
+                    {concertName}
+                  </select>
+                </div>
+                <div className="place_and_change">
+                  <div className="hold_place_block">
                     <label htmlFor="hold_area">舉行地點　</label>
                     <select value={this.state.ConcertPlace} onChange={this.changeConcertPlace.bind(this)}>
                       <option value="">請選擇</option>
                       {concertPlace}
                     </select>
+                  </div>
+                  <div className="change_way_block">
                     <label htmlFor="change_way">交換方式　</label>
                     <select value={this.state.changeWay} id="changeWay" onChange={this.handleChangeValue.bind(this)} required>
                       <option value="">請選擇</option>
@@ -356,55 +355,52 @@ class ChangeFormPopUp extends React.Component {
                       <option value="others_way">其他</option>
                     </select>
                   </div>
-                  <div>
-                    <label htmlFor="hold_ticket_area">持有票券區域 & 票價　</label>
-                    <select value={this.state.selectName} onChange={this.changeName.bind(this)} required>
-                      <option value="">請選擇</option>
-                      {names}
-                    </select>
-                    <select value={this.state.selectPrice} onChange={this.changePrice.bind(this)} required>
-                      <option value="">請選擇</option>
-                      {prices}
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="change_area">交換票券區域 & 票價　</label>
-                    <select value={this.state.exChangeSelectArea} onChange={this.exChangeArea.bind(this)} required>
-                      <option value="">請選擇</option>
-                      {exChangeAreas}
-                    </select>
-                    <select value={this.state.exChangeSelectPrice} onChange={this.exChangePrice.bind(this)} required>
-                      <option value="">請選擇</option>
-                      {exChangePrices}
-                    </select>
-                  </div>
-                  <div>
-
-                  </div>
-                  <div>
-                    <label htmlFor="price_spread">票券價差　<span className="spread_total">
-                      {this.state.pricePlusTag + this.state.priceSpread}</span></label>
-                  </div>
-                  <div>
-                    <span onChange={this.handleChangeValue.bind(this)}>
-                      聯絡資訊｜ {this.props.profile.user_name}  {this.props.profile.phone_number}  {this.state.email}
-                    </span>
-                  </div>
-                  <div>
-                    <label htmlFor="ps_text">備註　</label>
-                    <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required></textarea>
-                  </div>
-                  <label>
-                    <input type="file" url={this.state.url} id="filepath" onChange={this.handleImageUpload.bind(this)} />
-                    <p>上傳的圖檔請小於2MB，謝謝！</p>
-                  </label>
-                  <p>
-                    <input type="checkbox" checked={this.state.isChecked} onChange={this.toggleChange} required />
-                    請再次確認填寫資訊，確認無誤後再送出。
+                </div>
+                <div className="data_block">
+                  <label htmlFor="hold_ticket_area">持有區域 & 票價　</label>
+                  <select value={this.state.selectName} onChange={this.changeName.bind(this)} required>
+                    <option value="">請選擇</option>
+                    {names}
+                  </select>
+                  <select value={this.state.selectPrice} onChange={this.changePrice.bind(this)} required>
+                    <option value="">請選擇</option>
+                    {prices}
+                  </select>
+                </div>
+                <div className="data_block">
+                  <label htmlFor="change_area">交換區域 & 票價　</label>
+                  <select value={this.state.exChangeSelectArea} onChange={this.exChangeArea.bind(this)} required>
+                    <option value="">請選擇</option>
+                    {exChangeAreas}
+                  </select>
+                  <select value={this.state.exChangeSelectPrice} onChange={this.exChangePrice.bind(this)} required>
+                    <option value="">請選擇</option>
+                    {exChangePrices}
+                  </select>
+                </div>
+                <div className="data_block">
+                  <label htmlFor="price_spread">票券價差　<span className="spread_total">
+                    {this.state.pricePlusTag + this.state.priceSpread}</span></label>
+                </div>
+                <div className="data_block" onChange={this.handleChangeValue.bind(this)}>
+                  <p>聯絡資訊｜</p>
+                  <p>{this.props.profile.user_name} {this.props.profile.phone_number}</p>
+                  <p>{this.state.email}</p>
+                </div>
+                <div className="data_block">
+                  <label htmlFor="ps_text">備註　</label>
+                  <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required></textarea>
+                </div>
+                <label>
+                  <input type="file" url={this.state.url} id="filepath" onChange={this.handleImageUpload.bind(this)} />
+                  <p>上傳的圖檔請小於2MB，謝謝！</p>
+                </label>
+                <p>
+                  <input type="checkbox" className="checkbox_style" checked={this.state.isChecked} onChange={this.toggleChange} required />
+                  請再次確認填寫資訊，確認無誤後再送出。
                       </p>
-                  <button className="ChangeFormSubmit">確認送出</button>
-                </form>
-              </div>
+                <button className="ChangeFormSubmit">確認送出</button>
+              </form>
             </div>
           </div>
         </Popup>
