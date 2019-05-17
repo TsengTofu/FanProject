@@ -1,12 +1,8 @@
 /* 表單css */
 
 .topContent .popup-content {
-  width: 35% !important;
-}
-
-.wrap_popup form div, .wrap_popup form p {
-  font-size: 1vw;
-  margin: 10px auto;
+  width: 30% !important;
+  font-weight: bold;
 }
 
 .change_form_all {
@@ -15,11 +11,12 @@
   border-radius: 5px;
   text-align: center;
   box-sizing: border-box;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .form_title {
   font-size: 1.2vw;
-  font-weight: bold;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   color: #fff;
   border-radius: 5px 5px 0 0;
@@ -48,14 +45,15 @@
 .change_form .data_block {
   display: flex;
   width: 100%;
+  margin:5px 0;
 }
 
-.change_form .data_block label, .change_form .data_block select{
-  width:30%;
+.change_form .data_block label, .change_form .data_block select {
+  width: 26%;
 }
 
-.change_form .data_block select{
-  width:35%;
+.change_form .data_block select {
+  width: 37%;
 }
 
 .change_form select, .change_form input, .change_form textarea {
@@ -66,6 +64,10 @@
   padding: 2px;
   line-height: 1.5;
   box-sizing: border-box;
+}
+
+.change_form textarea {
+  resize: none;
 }
 
 .change_form .checkbox_style {

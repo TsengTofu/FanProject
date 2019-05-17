@@ -332,7 +332,8 @@ class ChangeFormPopUp extends React.Component {
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <p>{this.props.name}</p>
                 <div className="data_block">
-                  <label htmlFor="inputform_concertName">演唱會名稱　</label>
+                  <label htmlFor="inputform_concertName">
+                    <i className="fas fa-music"></i> 演唱會名稱</label>
                   <select value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
                     <option value="">請選擇</option>
                     {concertName}
@@ -340,14 +341,16 @@ class ChangeFormPopUp extends React.Component {
                 </div>
                 <div className="place_and_change">
                   <div className="hold_place_block">
-                    <label htmlFor="hold_area">舉行地點　</label>
+                    <label htmlFor="hold_area">
+                    <i className="fas fa-map-marker-alt"></i> 舉行地點</label>
                     <select value={this.state.ConcertPlace} onChange={this.changeConcertPlace.bind(this)}>
                       <option value="">請選擇</option>
                       {concertPlace}
                     </select>
                   </div>
                   <div className="change_way_block">
-                    <label htmlFor="change_way">交換方式　</label>
+                    <label htmlFor="change_way">
+                      <i className="fas fa-exchange-alt"></i> 交換方式</label>
                     <select value={this.state.changeWay} id="changeWay" onChange={this.handleChangeValue.bind(this)} required>
                       <option value="">請選擇</option>
                       <option value="send_package">郵寄</option>
@@ -357,7 +360,7 @@ class ChangeFormPopUp extends React.Component {
                   </div>
                 </div>
                 <div className="data_block">
-                  <label htmlFor="hold_ticket_area">持有區域 & 票價　</label>
+                  <label htmlFor="hold_ticket_area">持有區域 & 票價</label>
                   <select value={this.state.selectName} onChange={this.changeName.bind(this)} required>
                     <option value="">請選擇</option>
                     {names}
@@ -368,7 +371,7 @@ class ChangeFormPopUp extends React.Component {
                   </select>
                 </div>
                 <div className="data_block">
-                  <label htmlFor="change_area">交換區域 & 票價　</label>
+                  <label htmlFor="change_area">交換區域 & 票價</label>
                   <select value={this.state.exChangeSelectArea} onChange={this.exChangeArea.bind(this)} required>
                     <option value="">請選擇</option>
                     {exChangeAreas}
@@ -379,16 +382,16 @@ class ChangeFormPopUp extends React.Component {
                   </select>
                 </div>
                 <div className="data_block">
-                  <label htmlFor="price_spread">票券價差　<span className="spread_total">
+                  <label htmlFor="price_spread">票券價差<span className="spread_total">
                     {this.state.pricePlusTag + this.state.priceSpread}</span></label>
                 </div>
                 <div className="data_block" onChange={this.handleChangeValue.bind(this)}>
                   <p>聯絡資訊｜</p>
-                  <p>{this.props.profile.user_name} {this.props.profile.phone_number}</p>
-                  <p>{this.state.email}</p>
+                  <p>{this.props.profile.user_name}　<span>{this.props.profile.phone_number}</span></p>
+                  <p>　{this.state.email}</p>
                 </div>
                 <div className="data_block">
-                  <label htmlFor="ps_text">備註　</label>
+                  <label htmlFor="ps_text">備註</label>
                   <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required></textarea>
                 </div>
                 <label>
