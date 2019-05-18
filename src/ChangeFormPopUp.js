@@ -128,7 +128,10 @@ class ChangeFormPopUp extends React.Component {
             pricePlusTag: '您需要補給對方NT$'
           })
         } else {
-          this.setState({ priceSpread: '您不需要補差額' })
+          this.setState({ 
+            priceSpread: '',
+            pricePlusTag: '您不需要補差額'
+          })
         }
       }
 
@@ -165,8 +168,11 @@ class ChangeFormPopUp extends React.Component {
             priceSpread: selectPrice_change - selectPrice_hold,
             pricePlusTag: '您需要補給對方NT$'
           })
-        } else {
-          this.setState({ priceSpread: '您不需要補差額' })
+        } else{
+          this.setState({ 
+            priceSpread: '',
+            pricePlusTag: '您不需要補差額'
+          })
         }
       }
     )
@@ -331,10 +337,10 @@ class ChangeFormPopUp extends React.Component {
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <p>{this.props.name}</p>
                 <div className="data_block">
-                  <label htmlFor="inputform_concertName">
-                    <i className="fas fa-microphone"></i> 演唱會</label>
+                  <label htmlFor="inputform_concertName" className="inputform_concertName">
+                    <i className="fas fa-microphone"></i> 活動名稱</label>
                   <select className="concert_name_style" value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
-                    <option value="">請選擇演唱會</option>
+                    <option value="">請選擇活動名稱</option>
                     {concertName}
                   </select>
                 </div>
@@ -349,7 +355,7 @@ class ChangeFormPopUp extends React.Component {
                   </div>
                   <div className="change_way_block">
                     <label htmlFor="change_way">
-                      <i className="fas fa-exchange-alt"></i> 交換方式</label>
+                    <i className="fas fa-undo-alt"></i> 交換方式</label>
                     <select value={this.state.changeWay} id="changeWay" onChange={this.handleChangeValue.bind(this)} required>
                       <option value="">請選擇</option>
                       <option value="send_package">郵寄</option>
@@ -382,9 +388,9 @@ class ChangeFormPopUp extends React.Component {
                 </div>
                 <div className="data_block">
                   <label htmlFor="price_spread" className="price_spread">
-                    <i className="fas fa-comments-dollar"></i> 票券價差｜{this.state.pricePlusTag + this.state.priceSpread}</label>
+                    <i className="fas fa-comments-dollar"></i> 價差｜{this.state.pricePlusTag + this.state.priceSpread}</label>
                 </div>
-                <div className="data_block" onChange={this.handleChangeValue.bind(this)}>
+                <div className="data_block hide_contact" onChange={this.handleChangeValue.bind(this)}>
                   <p><i className="fas fa-address-card"></i> 聯絡資訊｜</p>
                   <p>{this.props.profile.user_name}／<span>{this.props.profile.phone_number}</span></p>
                   <p>／{this.state.email}</p>
