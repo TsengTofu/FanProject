@@ -198,8 +198,8 @@
 
 @media screen and (max-width:768px) {
   .topContent .popup-content {
-    width: 85% !important;
-    top:50px;
+    width: 88% !important;
+    top:80px;
   }
   .change_form .data_block .inputform_concertName, 
   .change_form .data_block .concert_name_style, 
@@ -216,9 +216,7 @@
   .change_form .data_block .price_style {
     margin: 0;
   }
-  .check_box_txt {
-    font-size: 10px;
-  }
+
   .change_form .file_upload, .select_file {
     height: 46px;
   }
@@ -231,5 +229,8 @@
   }
   .change_form .hide_contact{
     display: none;
+  }
+  .form_title{
+    font-size: 20px;
   }
 }
