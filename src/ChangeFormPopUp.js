@@ -333,8 +333,8 @@ class ChangeFormPopUp extends React.Component {
                 <div className="data_block">
                   <label htmlFor="inputform_concertName">
                     <i className="fas fa-microphone"></i> 演唱會</label>
-                  <select value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
-                    <option value="">請選擇</option>
+                  <select className="concert_name_style" value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
+                    <option value="">請選擇演唱會</option>
                     {concertName}
                   </select>
                 </div>
@@ -361,22 +361,22 @@ class ChangeFormPopUp extends React.Component {
                 <div className="data_block">
                   <label htmlFor="hold_ticket_area">持有區域 & 票價</label>
                   <select value={this.state.selectName} onChange={this.changeName.bind(this)} required>
-                    <option value="">請選擇</option>
+                    <option value="">請選擇區域</option>
                     {names}
                   </select>
-                  <select value={this.state.selectPrice} onChange={this.changePrice.bind(this)} required>
-                    <option value="">請選擇</option>
+                  <select className="price_style" value={this.state.selectPrice} onChange={this.changePrice.bind(this)} required>
+                    <option value="">請選擇票價</option>
                     {prices}
                   </select>
                 </div>
                 <div className="data_block">
                   <label htmlFor="change_area">交換區域 & 票價</label>
                   <select value={this.state.exChangeSelectArea} onChange={this.exChangeArea.bind(this)} required>
-                    <option value="">請選擇</option>
+                    <option value="">請選擇區域</option>
                     {exChangeAreas}
                   </select>
-                  <select value={this.state.exChangeSelectPrice} onChange={this.exChangePrice.bind(this)} required>
-                    <option value="">請選擇</option>
+                  <select  className="price_style" value={this.state.exChangeSelectPrice} onChange={this.exChangePrice.bind(this)} required>
+                    <option value="">請選擇票價</option>
                     {exChangePrices}
                   </select>
                 </div>

@@ -53,18 +53,30 @@
 }
 
 .change_form .data_block select {
-  width: 37%;
+  width: 36%;
+}
+
+.change_form .data_block .price_style{
+  margin-left: 2%;
+}
+
+.change_form .data_block .concert_name_style{
+  width: 74%;
 }
 
 .change_form select, .change_form input, .change_form textarea {
   width: 100%;
   border-style: none;
   border-radius: 5px;
-  /* border: 1px solid #888; */
   padding: 2px;
   line-height: 1.5;
   box-sizing: border-box;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+  font-family: "微軟正黑體";
+  letter-spacing: 1px;
 }
+
+
 
 .change_form textarea {
   resize: none;
