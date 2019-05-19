@@ -51,9 +51,9 @@ class MemberProfileApplyData extends React.Component {
             let itemDocID = item.match_User_DocID;
             // 交換狀態的資料顯示 
             let exChangeStatus = itemData.initialChangeState;
-            if (exChangeStatus === 0) { exChangeStatus = '等待有緣人交換' }
+            if (exChangeStatus === 0) { exChangeStatus = '待交換' }
             else if (exChangeStatus === 1) {
-                exChangeStatus = '等待回應'
+                exChangeStatus = '待回應'
             } else if (exChangeStatus === 2) {
                 exChangeStatus = '已結案'
             } else {

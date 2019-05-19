@@ -24,7 +24,6 @@ class UpComingEvents extends React.Component {
 	}
 
 	render() {
-		// console.log(this.props.comingUpEventData);
 		const {comingUpEventData} = this.props;
 		console.log(comingUpEventData);
 		const items = comingUpEventData && comingUpEventData.map((item) => (
@@ -60,7 +59,7 @@ class UpComingEvents extends React.Component {
 	
 		return (
             <div className="upComing">
-                <h3 className="upComingTitle">UPCOMING EVENTS</h3>
+                <h3 className="upComingTitle">近期活動</h3>
 				<ul>
 					{items}
 				</ul>
@@ -85,23 +84,3 @@ const mapStateToProps = (state) => {
    export default connect(
 	mapStateToProps,mapDispatchToProps
    )(UpComingEvents);
-  
-
-
-
-// const ProjectList =({projects})=>{
-//     return(
-//         <div>
-//             {
-                // 前面的projects是偵測有沒有抓到state或資料 
-//                 projects&&projects.map(project=>{
-//                     return(
-                        // <link to={'/project/'+ project.id}>
-                        //   <div>...</div>
-                        // </link>
-//                     )
-//                 })
-//             }
-//         </div>
-//     )
-// }

@@ -40,7 +40,7 @@
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     color:#fff;
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 24px;
     width: 15%;
     text-align: center;
     margin:0 auto;
@@ -56,9 +56,12 @@
   }
 
   /* RWD */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .searchbar{
       width: 90%;
+    }
+    .change_btn{
+      width: 70%;
     }
   }
    

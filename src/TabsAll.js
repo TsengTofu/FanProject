@@ -20,24 +20,4 @@ const TabsAll = ({ activeTabIndex, handleClickTab,tabIndex }) => {
     </div>)
 }
 
-
-
-
-
-
-
-// class TabsAll extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-//     return (
-//         <div>
-//             <TabForSignUpAndLogin/>
-//         </div>         
-//     );
-//   }
-// };
-
 export default TabsAll;

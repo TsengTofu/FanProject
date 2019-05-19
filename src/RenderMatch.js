@@ -68,7 +68,7 @@ class RenderMatch extends React.Component {
 						{
 							item.changeWay === 'send_package' && '郵寄' || item.changeWay === 'face_to_face' && '面交' || item.changeWay === 'others_way' && '其他'
 						}｜{
-							item.initialChangeState === 0 && '等待有緣人交換' || item.initialChangeState === 1 && '等待回應' || item.initialChangeState === 2 && '已結案' || item.initialChangeState === 3 && '拒絕'
+							item.initialChangeState === 0 && '待交換' || item.initialChangeState === 1 && '待回應' || item.initialChangeState === 2 && '已結案' || item.initialChangeState === 3 && '拒絕'
 						}
 					</p>
 				</div>
@@ -99,7 +99,7 @@ class RenderMatch extends React.Component {
 						{
 							item.changeWay === 'send_package' && '郵寄' || item.changeWay === 'face_to_face' && '面交' || item.changeWay === 'others_way' && '其他'
 						}｜{
-							item.initialChangeState === 0 && '等待有緣人交換' || item.initialChangeState === 1 && '等待回應' || item.initialChangeState === 2 && '已結案' || item.initialChangeState === 3 && '拒絕'
+							item.initialChangeState === 0 && '待交換' || item.initialChangeState === 1 && '待回應' || item.initialChangeState === 2 && '已結案' || item.initialChangeState === 3 && '拒絕'
 						}
 					</p>
 				</div>

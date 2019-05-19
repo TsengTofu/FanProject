@@ -233,4 +233,10 @@
   .form_title{
     font-size: 20px;
   }
+ .check_box_txt{
+   font-size: 10px;
+ }
+ .ps_text{
+   display: none;
+ }
 }

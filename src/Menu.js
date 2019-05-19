@@ -34,7 +34,7 @@ class Menu extends React.Component {
 						</div>
 					</Link>
 					<div className="right_nav">
-						<Link to='/member_profile' className="member"><div className="member_detail"><img src={member} alt=""/><p>會員資料</p></div></Link>						
+						<Link to='/member_profile' className="member"><div className="member_detail"><img src={member} alt=""/><p>會員</p></div></Link>						
 						<Link to="/entry" className="signout"><div className="sign_out" onClick={ () => firebase.auth().signOut() }><img src={logout} alt=""/><p>登出</p></div></Link>
 						<a href="#" className={this.state.active?'menu-trigger active':'menu-trigger'} onClick={this.toggleMenuActive}>
 							<span></span>

@@ -91,9 +91,9 @@ class DealResponseDashBoard extends React.Component {
             // 交換狀態的資料顯示
             let exChangeStatus = listItem.data.initialChangeState;
 
-            if (exChangeStatus === 0) { exChangeStatus = '等待有緣人交換' }
+            if (exChangeStatus === 0) { exChangeStatus = '待交換' }
             else if (exChangeStatus === 1) {
-                exChangeStatus = '等待回應'
+                exChangeStatus = '待回應'
             } else if (exChangeStatus === 2) {
                 exChangeStatus = '已結案'
             } else {
@@ -129,9 +129,9 @@ class DealResponseDashBoard extends React.Component {
                     
                     {listItem.apply&&listItem.apply.map((item, index) => {
                         let exChangeStatus_applied = item.initialChangeState;
-                        if (exChangeStatus_applied === 0) { exChangeStatus_applied = '等待有緣人交換' }
+                        if (exChangeStatus_applied === 0) { exChangeStatus_applied = '待交換' }
                         else if (exChangeStatus_applied === 1) {
-                            exChangeStatus_applied = '等待回應'
+                            exChangeStatus_applied = '待回應'
                         } else if (exChangeStatus_applied === 2) {
                             exChangeStatus_applied = '已結案'
                         } else {

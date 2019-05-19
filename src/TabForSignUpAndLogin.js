@@ -24,21 +24,4 @@ class TabForSignUpAndLogin extends React.Component {
   }
 };
 
-// const mapDispatchToProps = (dispatch)=>{
-//   return{
-//     // signUp:(newUser)=>dispatch(signUp(newUser))
-//   }
-// }
-
-// const mapStateToProps = (state) =>{
-//   return{
-//     auth:state.firebase.auth,
-//     authError:state.auth.authError
-//   }
-// }
-
-
-// export default connect(mapStateToProps,mapDispatchToProps)(TabForSignUpAndLogin)
-
-
 export default TabForSignUpAndLogin;

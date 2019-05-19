@@ -154,7 +154,6 @@ class ChangeFormPopUp extends React.Component {
   exChangePrice(e) {
     this.setState({ exChangeSelectPrice: e.target.value },
       function () {
-        alert('Hello')
         let selectPrice_hold = Number((this.state.selectPrice).replace(/\D/g, ""));
         let selectPrice_change = Number((this.state.exChangeSelectPrice).replace(/\D/g, ""));
         // this.setState({priceSpread: selectPrice_hold-selectPrice_change})
@@ -332,14 +331,14 @@ class ChangeFormPopUp extends React.Component {
           onClose={() => this.closeModal()}
           contentStyle={popUpStyle}>
           <div className="change_form_all">
-            <p className="form_title" >TICKET EX-CHANGE FORM</p>
+            <p className="form_title" >TICKET EXCHANGE FORM</p>
             <div className="change_form">
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <p>{this.props.name}</p>
                 <div className="data_block">
                   <label htmlFor="inputform_concertName" className="inputform_concertName">
                     <i className="fas fa-microphone"></i> 活動名稱</label>
-                  <select className="concert_name_style" value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)}>
+                  <select className="concert_name_style" value={this.state.ConcertName} onChange={this.changeConcertName.bind(this)} required>
                     <option value="">請選擇活動名稱</option>
                     {concertName}
                   </select>
@@ -348,7 +347,7 @@ class ChangeFormPopUp extends React.Component {
                   <div className="hold_place_block">
                     <label htmlFor="hold_area">
                       <i className="fas fa-map-marker-alt"></i> 舉行地點</label>
-                    <select value={this.state.ConcertPlace} onChange={this.changeConcertPlace.bind(this)}>
+                    <select value={this.state.ConcertPlace} onChange={this.changeConcertPlace.bind(this)} required>
                       <option value="">請選擇</option>
                       {concertPlace}
                     </select>
@@ -396,11 +395,11 @@ class ChangeFormPopUp extends React.Component {
                   <p>／{this.state.email}</p>
                 </div>
                 <div className="data_block">
-                  <label htmlFor="ps_text"><i className="fas fa-comment-dots"></i> 備註</label>
-                  <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required placeholder="說些什麼吧"></textarea>
+                  <label htmlFor="ps_text" className="ps_text"><i className="fas fa-comment-dots"></i> 備註</label>
+                  <textarea value={this.state.reminderTxt} id="reminderTxt" onChange={this.handleChangeValue.bind(this)} required placeholder="有什麼想說的嗎？或是額外的需求…"></textarea>
                 </div>
                 <label className="upload_block">
-                  <input type="file" className="file_upload" url={this.state.url} id="filepath" onChange={this.handleImageUpload.bind(this)} />
+                  <input type="file" className="file_upload" url={this.state.url} id="filepath" onChange={this.handleImageUpload.bind(this)} required/>
                   <div className="select_file">
                     <p><i className="fa fa-download" aria-hidden="true"></i> 上傳票券照片</p>
                     <span>上傳的圖檔請小於2MB，謝謝！</span>
@@ -409,7 +408,7 @@ class ChangeFormPopUp extends React.Component {
                 </label>
                 <p className="check_box_txt">
                   <input type="checkbox" className="checkbox_style" checked={this.state.isChecked} onChange={this.toggleChange} required />
-                  請再次確認填寫資訊，確認無誤後再送出。
+                  請再次確認填寫資訊，確認無誤後提交。
                       </p>
                 <button className="ChangeFormSubmit">確認送出</button>
               </form>
