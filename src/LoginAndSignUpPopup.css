@@ -24,6 +24,7 @@
 
 .login_and_signup_wrap_popup{
     position: relative;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .switch_button{
@@ -57,8 +58,9 @@
 
 .signup_form input, .login_form input {
     width: 75%;
+    border-style:none;
     border-radius: 5px;
-    border: solid 1px #888;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
     padding: 0 5px;
 }
 
@@ -82,6 +84,7 @@
     font-family: "微軟正黑體";
     width: 80%;
     margin:10px auto;
+    cursor: pointer;
 }
 
 .signup_form button:hover, .login_form button:hover {
@@ -93,30 +96,6 @@
     margin:0 auto;
     line-height: 1.5;
 }
-
-@media screen and (max-width: 1440px) {
-    .topBNContainer .popup-content{
-        width: 36% !important;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    .topBNContainer .popup-content{
-        width: 80% !important;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 /* 立即加入按鈕 */
 
@@ -326,5 +305,18 @@
 }
 
 /* RWD */
+@media screen and (max-width: 1440px) {
+    .topBNContainer .popup-content{
+        width: 36% !important;
+    }
+}
 
-@media screen and (max-width: 1000px) {}
+
+@media screen and (max-width: 768px) {
+    .topBNContainer .popup-content{
+        width: 80% !important;
+    }
+    .joinRightNow{
+        width: 40%;
+    }
+}
