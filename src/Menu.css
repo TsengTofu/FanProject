@@ -141,19 +141,18 @@
  }
 
  /* RWD */
- @media screen and (max-width: 1200px) {
 
-    .right_nav{
-        width: 60%;
+@media screen and (max-width: 768px) {
+    /* .logo_no_light{
+        
     }
+    .right_nav{
+        
+    }
+     */
 
     .right_nav a:first-child{
         width: 35%;
     }
-}
-
-@media screen and (max-width: 768px) {
-    
-
     
 }

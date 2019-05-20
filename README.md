@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h1>Find Ticket - 我們一起去看演唱會 - 票券交換平台</h1>
+<p>Find Ticket 是一個可以交換票券的平台。</p>
 
-In the project directory, you can run:
+可以在填寫交換票券需求表單之後，立即搜尋資料庫是否有符合需求的票券；如果有，可以向對方送出請求；如果沒有，將會跳轉至會員頁面。
+
+歡迎各位有需求的朋友們一起使用這個平台，換到理想的演唱會票券！<br>
+立即換票： https://tsengtofu.github.io/FanProject/index.html#/entry
 
 ### `npm start`
-
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This project was built with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Skills**
+* **Programming Language**
+    * JavaScript / HTML / CSS / Responsive Web Design
 
-### `npm run build`
+* **Tools for Development**
+    * Webpack / Git / GitHub
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Front-End Library & Framework**
+    * React / Router
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* **Cloud Services**
+    * Firebase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Version**
+* 1.1 - 2019/05/20
+    * 第一版 
 
-### `npm run eject`
+## **Demo**
+<!-- 這邊要放 -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## **Features**
+* **登入 Login**
+    * 透過Firebase提供的會員系統註冊與登入
+* **會員頁面 Member Page**
+    * 可新增與刪除交換票券需求
+    * 可再次搜尋資料庫是否有符合的票券
+* **換票邏輯 Exchange Logic**
+    * 
+    <!-- 這邊要放一張圖 -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **Screenshot**
+<!-- ![圖片描述]()
+![圖片描述]()
+![圖片描述]() -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## **Contact**
+Tseng Fu Chun <br>
+tsengbatty@gmail.com
