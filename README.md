@@ -1,6 +1,8 @@
-
+<p style="text-align:center;">
+    <img src="https://i.imgur.com/qbiOiQR.png" width="30%" height="auto" style="margin:0 auto;" >
+</p>
 <h1>Find Ticket - 我們一起去看演唱會 - 票券交換平台</h1>
-<p>Find Ticket 是一個可以交換票券的平台。</p>
+
 
 可以在填寫交換票券需求表單之後，立即搜尋資料庫是否有符合需求的票券；如果有，可以向對方送出請求；如果沒有，將會跳轉至會員頁面。
 
@@ -12,6 +14,14 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 This project was built with [Create React App](https://github.com/facebook/create-react-app).
+
+### Motivation:
+<!-- The reason why I did this project is that when I was working in Japan, many Japanese people asked me lots of questions
+about Taiwan, especially food.  However, every time when I search the photos in order to show them how tasty the Taiwanese
+food are, I found that most of photos looks not good and also lack of appropriate introduction.  Moreover, I keep thinking
+that we have so many fantastic food in Taiwan but why people in the world only know sushi and kimchi.
+Therefore, I decided to make a site which looks like the encyclopedia of Taiwanese food. -->
+
 
 
 ## **Skills**
