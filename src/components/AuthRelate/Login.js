@@ -10,8 +10,8 @@ import { Redirect } from 'react-router-dom'
 // actions
 import { signIn } from '../../store/actions/authAction'
 
-import email from './img/svg/email.svg'
-import password from './img/svg/password.svg'
+import email from '../../img/svg/email.svg'
+import password from '../../img/svg/password.svg'
 
 
 class Login extends React.Component {

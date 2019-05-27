@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginAndSignUpPopup from './LoginAndSignUpPopup'
+import LoginAndSignUpPopup from './components/AuthRelate/LoginAndSignUpPopup'
 
 // css part
 import './Logo.css';

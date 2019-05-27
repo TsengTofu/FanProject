@@ -5,9 +5,9 @@ import { Link,Redirect } from 'react-router-dom';
 
 // css part
 import './Menu.css';
-import logout from './img/svg/logout.svg'
-import member from './img/svg/member.svg'
-import logo from './img/svg/LOGO.svg'
+import logout from '../../img/svg/logout.svg'
+import member from '../../img/svg/member.svg'
+import logo from '../../img/svg/LOGO.svg'
 
 class Menu extends React.Component {
 	constructor(props) {

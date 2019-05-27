@@ -1,7 +1,7 @@
 // 會員頁面 基礎資料
 import React from 'react'
 import { connect } from 'react-redux'
-import '../src/MemberProfile.css'
+import '../MemberProfile/MemberProfile.css'
 
 // import action
 import { getUserApplyFormData } from '../../store/actions/GetUserFormDataAction'

@@ -9,11 +9,8 @@ import { changeFormAction } from '../../store/actions/ChangeFormAction'
 import { createEXChangeFormData } from '../../store/actions/SubmitFormAction'
 
 
-
-// import image
-import form_Illustration from './img/eastwood-page-under-construction.png'
 // css
-import '../src/ChangeFormPopUp.css';
+import './ChangeFormPopUp.css';
 
 // 可以const兩種不同的state 這樣抓到的資料就會不一樣
 class ChangeFormPopUp extends React.Component {

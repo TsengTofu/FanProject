@@ -4,18 +4,18 @@ import firebase from "./config/firebaseConfig";
 
 // 組件們
 
-import Home from './Home'
-import Menu from './Menu'
-import Footer from './Footer'
-import BackToTop from './BackToTop'
+import Home from './components/HomePage/Home'
+import Menu from './components/LayoutElement/Menu'
+import Footer from './components/LayoutElement/Footer'
+import BackToTop from './components/LayoutElement/BackToTop'
 
 
 
 // css part
 import './style.css';
 import Logo from './Logo';
-import RenderMatch from './RenderMatch';
-import MemberProfile from './MemberProfile';
+import RenderMatch from './components/MatchRelate/RenderMatch';
+import MemberProfile from './components/MemberProfile/MemberProfile';
 
 class App extends React.Component {
 	constructor(props) {

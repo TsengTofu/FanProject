@@ -7,7 +7,7 @@ import UpComingEvents from './upComingEvents'
 import HomePageBoard from './HomePageBoard'
 
 // css part
-import '../src/Home.css';
+import '../HomePage/Home.css';
 
 class Home extends React.Component {
 	render() {		

@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 import { signUp } from '../../store/actions/authAction'
-import email from './img/svg/email.svg'
-import password from './img/svg/password.svg'
-import phone from './img/svg/phone.svg'
-import user from './img/svg/user.svg'
+import email from '../../img/svg/email.svg'
+import password from '../../img/svg/password.svg'
+import phone from '../../img/svg/phone.svg'
+import user from '../../img/svg/user.svg'
 
 // 組件
 

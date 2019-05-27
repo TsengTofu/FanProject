@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router';
 
 // css part
-import '../src/upComingEvents.css';
+import './upComingEvents.css';
 
 // import action
 import { createupComingEvent } from '../../store/actions/upComingEventAction'
