@@ -49,29 +49,29 @@ export const changeFormAction = (formdata,concerDataAll) => {
             })
         // jj
         // 這邊暫時不抓資料
-        // firestore.collection('jj').get()
-        //     .then(querySnapshot => {
-        //         // console.log('jj', querySnapshot)
-        //         querySnapshot.forEach(doc => {
-        //             let datajj = doc.data();
-        //             // console.log(doc.data())
-        //             dataArray.push(datajj)
-        //             // dispatch({type:'CREATE_OPTION_2',datachencheer})                 
-        //         })
-        //     })
+        firestore.collection('jj').get()
+            .then(querySnapshot => {
+                // console.log('jj', querySnapshot)
+                querySnapshot.forEach(doc => {
+                    let datajj = doc.data();
+                    // console.log(doc.data())
+                    dataArray.push(datajj)
+                    // dispatch({type:'CREATE_OPTION_2',datachencheer})                 
+                })
+            })
 
         // sharchingtung
         // 這邊暫時不抓資料
-        // firestore.collection('sharchingtung').get()
-        //     .then(querySnapshot => {
-        //         // console.log('sharchingtung', querySnapshot)
-        //         querySnapshot.forEach(doc => {
-        //             let datasharchingtung = doc.data();
-        //             // console.log(doc.data())
-        //             dataArray.push(datasharchingtung)
-        //             // dispatch({type:'CREATE_OPTION_2',datachencheer})                 
-        //         })
-        //     })
+        firestore.collection('sharchingtung').get()
+            .then(querySnapshot => {
+                // console.log('sharchingtung', querySnapshot)
+                querySnapshot.forEach(doc => {
+                    let datasharchingtung = doc.data();
+                    // console.log(doc.data())
+                    dataArray.push(datasharchingtung)
+                    // dispatch({type:'CREATE_OPTION_2',datachencheer})                 
+                })
+            })
         
         // chencheer
         firestore.collection('chencheer').get()

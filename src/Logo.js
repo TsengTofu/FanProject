@@ -1,16 +1,9 @@
 import React from 'react'
-import Popup from 'reactjs-popup'
 import LoginAndSignUpPopup from './LoginAndSignUpPopup'
-
-
-
 
 // css part
 import './Logo.css';
 // import ConcertBg from '../img/Concert_bg.jpg'
-
-
-// 進平台的Logo，要求先加入會員
 class Logo extends React.Component {
 	render() {		
 		return (

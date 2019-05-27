@@ -1,0 +1,66 @@
+.homepage_exchange_block{
+    width: 75%;
+    margin:60px auto;
+    color:#fff;
+    
+}
+
+.exchange_block_details li{
+    /* border-bottom:1px solid #eee; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+
+.exchange_block_details li:nth-child(even){
+    background:rgba(255,255,255,0.2);
+}
+
+.exchange_block_details li div{
+    width: 25%;
+    text-align: center;
+    align-self: center;
+    line-height: 1.6;
+}
+
+.status{
+    background: #385F71;
+    width: 15%;
+    border-radius:5px;
+    margin:10px auto;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.category_title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 3;
+    background: #2B4162;
+    border-radius:5px 5px 0 0;
+}
+
+.category_title p{
+    width: 25%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .homepage_exchange_block{
+        width: 90%;
+    }
+    .ticket_block span{
+        font-size: 12px;
+    }
+    .status{
+        width: 60%;
+    }
+  }

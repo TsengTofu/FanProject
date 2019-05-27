@@ -1,0 +1,35 @@
+.footer_all{
+    background: #292929;
+    text-align: center;
+    color:#fff;
+    margin-top: 2vw;
+}
+
+.footer_ul{
+    width: 40%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    
+}
+
+.footer_ul a{
+    width: 20%;
+    color:#fff;    
+}
+
+.footer_ul a:hover{
+    color:#666;
+}
+
+
+.footer_ul li{
+    font-weight: bold;
+}
+
+.footer_all p{
+    background: #000;
+    padding:10px;
+}
