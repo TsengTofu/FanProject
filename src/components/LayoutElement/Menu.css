@@ -24,6 +24,10 @@
     margin: -6px 2vw 0px;
 }
 
+.logo_no_light:hover{
+    opacity:0.8;
+}
+
 .logo_no_light b {
     font: 100 3vh "Baloo Chettan";
     color: #fff;

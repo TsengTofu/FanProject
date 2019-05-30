@@ -8,8 +8,10 @@ import Home from './components/HomePage/Home'
 import Menu from './components/LayoutElement/Menu'
 import Footer from './components/LayoutElement/Footer'
 import BackToTop from './components/LayoutElement/BackToTop'
-
-
+import BuyTicketExplain from '../src/components/WebsiteDeclare/BuyTicketExplain'
+import MemberShipRules from '../src/components/WebsiteDeclare/MemberShipRules'
+import Faq from '../src/components/WebsiteDeclare/Faq'
+import AboutUs from '../src/components/WebsiteDeclare/AboutUs'
 
 // css part
 import './style.css';
@@ -54,6 +56,10 @@ class App extends React.Component {
 				<Route exact path="/" render={() => authenticated ? (<Home />) : (<Redirect to="/entry" />)} />
 				<Route path={['/renderMatch', '/member_profile','/']} render={() => !authenticated ? null : (<Menu/>)}  />
 				<Switch>
+					<Route path="/aboutus" component={AboutUs} />
+					<Route path="/faq" component={Faq} />
+					<Route path="/membershiprules" component={MemberShipRules} />
+					<Route path="/buyticketexplain" component={BuyTicketExplain} />
 					<Route path="/renderMatch" component={RenderMatch} />
 					<Route path="/member_profile" render={() => authenticated ? (<MemberProfile />) : null} />
 				</Switch>

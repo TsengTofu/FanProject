@@ -1,7 +1,7 @@
 // 連動選單的資料
 import { connect } from "redux";
 
-export const changeFormAction = (formdata,concerDataAll) => {
+export const changeFormAction = (formdata, concerDataAll) => {
     // dispatch 是一個 method 調用 action to the reducer
     // return 會有兩個參數
     return (dispatch, getState, { getFirebase, getFirestore }) => {
@@ -61,30 +61,168 @@ export const changeFormAction = (formdata,concerDataAll) => {
             })
 
         // sharchingtung
-        // 這邊暫時不抓資料
         firestore.collection('sharchingtung').get()
             .then(querySnapshot => {
-                // console.log('sharchingtung', querySnapshot)
                 querySnapshot.forEach(doc => {
                     let datasharchingtung = doc.data();
-                    // console.log(doc.data())
                     dataArray.push(datasharchingtung)
-                    // dispatch({type:'CREATE_OPTION_2',datachencheer})                 
                 })
             })
-        
+
+        // 5566
+        firestore.collection('5566-taipeiArena').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let fivefivesixsix = doc.data();
+                    dataArray.push(fivefivesixsix)
+                })
+            })
+
+        // aimer
+        firestore.collection('aimer').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let aimerdata = doc.data();
+                    dataArray.push(aimerdata)
+                })
+            })
+
+        // blackpink
+        firestore.collection('blackpink-ntsuArena').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let bpdata = doc.data();
+                    dataArray.push(bpdata)
+                })
+            })
+
+        // gem-karena
+        firestore.collection('gem-karena').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let gemdata = doc.data();
+                    dataArray.push(gemdata)
+                })
+            })
+
+        // jasonmraz
+        firestore.collection('jasonmraz').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let jasonmrazdata = doc.data();
+                    dataArray.push(jasonmrazdata)
+                })
+            })
+
+
+        // lionking
+        firestore.collection('lionking').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let lionkingdata = doc.data();
+                    dataArray.push(lionkingdata)
+                })
+            })
+
+
+        // lucrowd
+        firestore.collection('lucrowd').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let lucrowddata = doc.data();
+                    dataArray.push(lucrowddata)
+                })
+            })
+
+        // maroon5-karena
+        firestore.collection('maroon5-karena').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let maroon5data = doc.data();
+                    dataArray.push(maroon5data)
+                })
+            })
+
+
+        // oldboy
+        firestore.collection('oldboy').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let oldboydata = doc.data();
+                    dataArray.push(oldboydata)
+                })
+            })
+
+
+        // parkbogum
+        firestore.collection('parkbogum').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let parkbogumdata = doc.data();
+                    dataArray.push(parkbogumdata)
+                })
+            })
+
+
+        // roybigyo
+        firestore.collection('roybigyo').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let roybigyodata = doc.data();
+                    dataArray.push(roybigyodata)
+                })
+            })
+
+        // shargchain_tower
+        firestore.collection('shargchain_tower').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let shargchaindata = doc.data();
+                    dataArray.push(shargchaindata)
+                })
+            })
+
+        // shuruyun
+        firestore.collection('shuruyun').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let shuruyundata = doc.data();
+                    dataArray.push(shuruyundata)
+                })
+            })
+
+
+        // sunmi
+        firestore.collection('sunmi').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let sunmidata = doc.data();
+                    dataArray.push(sunmidata)
+                })
+            })
+
+
+        // troyesivan
+        firestore.collection('troyesivan').get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let troyesivandata = doc.data();
+                    dataArray.push(troyesivandata)
+                })
+            })
+
+
+
         // chencheer
         firestore.collection('chencheer').get()
             .then(querySnapshot => {
-                // console.log('chencheer', querySnapshot)
                 querySnapshot.forEach(doc => {
                     let datachencheer = doc.data();
-                    // console.log(doc.data())
                     dataArray.push(datachencheer)
-                    // dispatch({type:'CREATE_OPTION_2',datachencheer})                 
                 })
             }).then(() => {
-                dispatch({ type: 'CREATE_OPTION', dataArray,concertArray})
+                console.log(dataArray)
+                dispatch({ type: 'CREATE_OPTION', dataArray, concertArray })
             }).catch((err) => {
                 // dispatch({type:'CREATE_PROJECT_ERROR',err})
             })

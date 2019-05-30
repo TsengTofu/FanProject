@@ -47,6 +47,13 @@
   margin: 5px 0;
 }
 
+select{    
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right:20px;
+}
+
 .change_form .data_block label, .change_form .data_block select {
   width: 26%;
 }
@@ -115,18 +122,19 @@
 
 /* 上傳票券的按鈕 */
 
-.upload_block {
+.change_form .upload_block {
   position: relative;
   width: 100%;
+  margin:0 auto;
 }
 
 .change_form .file_upload {
   border: none;
-  color: transparent;
+  opacity:0;
   height: 80px;
 }
 
-.file_upload::-webkit-file-upload-button {
+.file_upload[type=file]::-webkit-file-upload-button {
   visibility: hidden;
 }
 
@@ -154,6 +162,7 @@
   background: #fff;
   cursor: pointer;
   position: absolute;
+  left:0;
   top: 0;
   transition: all 0.2s;
 }
@@ -192,7 +201,7 @@
 
 @media screen and (max-width:1680px) {
   .topContent .popup-content {
-    width: 50% !important;
+    width: 45% !important;
   }
 }
 

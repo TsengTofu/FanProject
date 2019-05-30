@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 // css part
 import './upComingEvents.css';
@@ -23,7 +23,6 @@ class UpComingEvents extends React.Component {
 
 	render() {
 		const {comingUpEventData} = this.props;
-		console.log(comingUpEventData);
 		const items = comingUpEventData && comingUpEventData.map((item) => (
 		<li className="eventBlock" key={item.concert_id}>
 		<img src={item.mainPic}/>
@@ -42,15 +41,16 @@ class UpComingEvents extends React.Component {
 				</p>
 				<p className="month_year">{item.month} {`${item.date}`.split('/')[0]}</p>								
 			</div>
-			<div className="activityTitle">{`${item.name}`.toString().slice(0,22).trim().concat('...')}
-			{/* {console.log(`${item.name}`.toString().slice(0,50).trim().concat('...'))} */}
+			<div className="activityTitle">
+			{item.name}
+			{/* {`${item.name}`.toString().slice(0,30).trim().concat('...')} */}
 			</div>						
 			<div className="wrap_time_place">
 				<p className="time"><i className="far fa-calendar-alt"></i> {item.time}</p>
 				<p className="place"><i className="fas fa-map-marker-alt"></i> {item.place}</p>
 			</div>
 		</div>
-		<div className="details_btn">活動詳情 <i className="fas fa-chevron-right"></i></div>
+		<div className="details_btn"><Link to=''>活動詳情 <i className="fas fa-chevron-right"></i></Link></div>
 		{/* 這裡現在沒有id 要把li拆出來 連結要連結到新的畫面 */}
 	</li>
 	));	
