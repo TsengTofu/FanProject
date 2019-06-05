@@ -1,5 +1,5 @@
 {
-  "main.css": "/FanProject/static/css/main.7965d6a4.chunk.css",
+  "main.css": "/FanProject/static/css/main.7d281fbf.chunk.css",
   "main.js": "/FanProject/static/js/main.a83e53a9.chunk.js",
   "main.js.map": "/FanProject/static/js/main.a83e53a9.chunk.js.map",
   "runtime~main.js": "/FanProject/static/js/runtime~main.13220cf0.js",
@@ -7,9 +7,9 @@
   "static/js/2.b28f8ff9.chunk.js": "/FanProject/static/js/2.b28f8ff9.chunk.js",
   "static/js/2.b28f8ff9.chunk.js.map": "/FanProject/static/js/2.b28f8ff9.chunk.js.map",
   "index.html": "/FanProject/index.html",
-  "precache-manifest.fe2c515e1eda15532191ee9573f39796.js": "/FanProject/precache-manifest.fe2c515e1eda15532191ee9573f39796.js",
+  "precache-manifest.be6fd8a5660c4aa1307cc8a6403b9750.js": "/FanProject/precache-manifest.be6fd8a5660c4aa1307cc8a6403b9750.js",
   "service-worker.js": "/FanProject/service-worker.js",
-  "static/css/main.7965d6a4.chunk.css.map": "/FanProject/static/css/main.7965d6a4.chunk.css.map",
+  "static/css/main.7d281fbf.chunk.css.map": "/FanProject/static/css/main.7d281fbf.chunk.css.map",
   "static/media/Logo.css": "/FanProject/static/media/Concert_bg.3b7912f1.jpg",
   "static/media/LOGO.svg": "/FanProject/static/media/LOGO.57458336.svg",
   "static/media/email.svg": "/FanProject/static/media/email.1337f63c.svg",
