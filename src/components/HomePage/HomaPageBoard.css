@@ -53,6 +53,12 @@
 }
 
 
+@media screen and (max-width:1440px) {
+    .status{
+        width: 46%;
+    }
+  }
+
 @media screen and (max-width: 768px) {
     .homepage_exchange_block{
         width: 90%;
