@@ -1,0 +1,95 @@
+.topBNContainer{
+    background: url("./img/Concert_bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    max-width: 1920px;
+    height: 800px;
+    overflow-y: hidden;
+  }
+
+.logo_container{
+  text-align:center;
+}
+
+.viceTitle{
+    color:#fff;
+    font-size: 22px;
+    margin:20px auto;
+  }
+  
+  /* Logo的部份 */
+  .logo {
+    text-align: center;
+    width: 38%;
+    height:60px;
+    margin: 0 auto;
+  }
+  
+  .logo b{
+    font: 100 7vh "Baloo Chettan";
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #00B8BA, 0 0 0.5em #00B8BA, 0 0 0.1em #00B8BA, 0 10px 3px #000;
+  }
+  
+  .logo b span{
+    animation: blink linear infinite 2s;
+  }
+  
+  .logo b i{
+    font-size: 4vh;
+    transform:rotate(50deg);
+  
+  }
+  
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {    
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+  /* ---------- RWD ---------- */
+@media screen and (max-width: 1000px) {
+    .logo{
+      width: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .logo{
+      width: 95%;
+      height:50px;
+    }
+    .logo b{
+      font: 100 6vh "Baloo Chettan";
+    }  
+  }
+   

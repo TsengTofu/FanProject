@@ -1,0 +1,251 @@
+/* 表單css */
+
+.topContent .popup-content {
+  width: 28% !important;
+  font-weight: bold;
+}
+
+.change_form_all {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.form_title {
+  font-size: 24px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.change_form .form_img {
+  width: 50%;
+}
+
+.change_form {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  box-sizing: border-box;
+  display: block !important;
+}
+
+.change_form form {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.change_form .data_block {
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+}
+
+select{    
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right:20px;
+}
+
+.change_form .data_block label, .change_form .data_block select {
+  width: 26%;
+}
+
+.change_form .data_block .inputform_concertName {
+  width: 18%;
+}
+
+.change_form .data_block select {
+  width: 36%;
+}
+
+.change_form .data_block .price_style {
+  margin-left: 2%;
+}
+
+.change_form .data_block .concert_name_style {
+  width: 82%;
+}
+
+.change_form select, .change_form input, .change_form textarea {
+  width: 100%;
+  border-style: none;
+  border-radius: 5px;
+  padding: 2px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+  font-family: "微軟正黑體";
+  letter-spacing: 1px;
+}
+
+.change_form textarea {
+  resize: none;
+  border: none;
+}
+
+.change_form .checkbox_style {
+  width: 5%;
+}
+
+.place_and_change {
+  display: flex;
+}
+
+.hold_place_block, .change_way_block {
+  display: flex;
+  width: 50%;
+}
+
+.hold_place_block label, .change_way_block label {
+  width: 36%;
+}
+
+.change_way_block label {
+  margin: 0 2%;
+}
+
+.hold_place_block select, .change_way_block select {
+  width: 60%;
+}
+
+.change_form .data_block .price_spread {
+  width: 100%;
+}
+
+/* 上傳票券的按鈕 */
+
+.change_form .upload_block {
+  position: relative;
+  width: 100%;
+  margin:0 auto;
+}
+
+.change_form .file_upload {
+  border: none;
+  opacity:0;
+  height: 80px;
+}
+
+.file_upload[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.select_file p {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #fff;
+  width: 45%;
+  border-radius: 5px;
+  margin: 12px auto 0;
+  padding: 4px 0;
+  letter-spacing: 2px;
+}
+
+.select_file p:hover {
+  background-image: linear-gradient(to left, #434343 0%, black 100%);
+}
+
+.select_file {
+  height: 80px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  position: absolute;
+  left:0;
+  top: 0;
+  transition: all 0.2s;
+}
+
+.select_file:hover {
+  border: 2px solid rgba(54, 53, 53, 0.5);
+}
+
+.select_file span {
+  font-size: 14px;
+}
+
+.check_box_txt {
+  text-align: center;
+  margin: 2% auto;
+}
+
+.ChangeFormSubmit {
+  border-style: none;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  width: 100%;
+  padding: 10px 0px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-bottom: 8px solid #000;
+}
+
+.ChangeFormSubmit:hover {
+  background-image: linear-gradient(to left, #434343 0%, black 100%);
+}
+
+@media screen and (max-width:1680px) {
+  .topContent .popup-content {
+    width: 45% !important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .topContent .popup-content {
+    width: 88% !important;
+    top:80px;
+  }
+  .change_form .data_block .inputform_concertName, 
+  .change_form .data_block .concert_name_style, 
+  .hold_place_block label, .change_way_block label, 
+  .hold_place_block select, .change_way_block select, 
+  .change_form .data_block label,
+  .change_form .data_block select {
+    width: 100%;
+    font-size: 17px;
+  }
+  .change_form .data_block select {
+    width: 50%;
+  }
+  .change_form .data_block .price_style {
+    margin: 0;
+  }
+
+  .change_form .file_upload, .select_file {
+    height: 46px;
+  }
+  .select_file span,.price_spread,.inputform_concertName {
+    display: none;
+  }
+  .select_file p {
+    width: 65%;
+    margin: 4px auto;
+  }
+  .change_form .hide_contact{
+    display: none;
+  }
+  .form_title{
+    font-size: 20px;
+  }
+ .check_box_txt{
+   font-size: 10px;
+ }
+ .ps_text{
+   display: none;
+ }
+}
