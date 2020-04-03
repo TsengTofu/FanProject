@@ -24,9 +24,6 @@ jobs:
     - name: npm install
       run: |
         npm install
-    - name: npm run build
-      run: |
-        npm run tests
     - name: Commit files
       run: |
         cd $PUBLISH_DIR
