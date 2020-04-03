@@ -7,7 +7,7 @@ jobs:
   build:
     name: Build and deploy gh-pages
     env:
-      MY_SECRET   : ${{TsengTofu}}
+      MY_SECRET   : ${{secrets.commit_secret}}
       USER_NAME   : TsengTofu
       USER_EMAIL  : tsengbatty@gmail.com
       PUBLISH_DIR : ./dist
@@ -40,4 +40,5 @@ jobs:
         git add --all
         git commit -m "deploy to Github pages"
         git push origin gh-pages -f
+        echo $MY_SECRET
         echo 🤘 deploy gh-pages complete.
