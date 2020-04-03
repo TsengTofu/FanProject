@@ -7,7 +7,7 @@
 
 export const exChangeApplyBtn = (applyData, DecideData) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
-        const firebase = getFirebase();
+        // const firebase = getFirebase();
         const firestore = getFirestore();
         if (applyData.applySearch_docID) {
             let apply = [];
@@ -41,7 +41,7 @@ export const exChangeApplyBtn = (applyData, DecideData) => {
             let applydocID = applyData.Apply_docID;
             let deciderDocID = DecideData.deciderDocID;
             firestore.collection('exchange_form').doc(`${applydocID}`).update({ initialChangeState: 1 })
-            // 如果 ApplicationForm_context 裡面的 找的到對應的 doc 就update array [] 
+                // 如果 ApplicationForm_context 裡面的 找的到對應的 doc 就update array [] 
             firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).get().then(docSnapshot => {
                 if (docSnapshot.exists) {
                     firestore.collection('ApplicationForm_context').doc(`${deciderDocID}`).update({
@@ -68,45 +68,45 @@ export const exChangeApplyBtn = (applyData, DecideData) => {
 // 收到申請的那方會看到的所有資料-----------------------------------------------------------------
 export const getAllApplyDataToSpecificUser = (getAllApplyData) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
-        const firebase = getFirebase();
+        //const firebase = getFirebase();
         const firestore = getFirestore();
         const currentWho = getState().firebase.auth.uid;
         // 全部的資訊
-        let applyArray = [];
+        //let applyArray = [];
         let decideData = [];
 
         console.log(currentWho, '現在的使用者ID');
         // 現在的使用者是誰
 
         firestore.collection('ApplicationForm_context').where('deciderUserID', '==', `${currentWho}`).get().then(
-            querySnapshot => {              
-                    querySnapshot.forEach(doc => {
-                        let matchApplyDocID = doc.id;
-                        let matchApplyDocData = doc.data();
-                        console.log(matchApplyDocID)
-                        firestore.collection('exchange_form').doc(`${matchApplyDocID}`).get().then(
-                            querySnapshot => {
-                                let data = querySnapshot.data();
-                                data.docID = matchApplyDocID;
-                                matchApplyDocData.apply.map((items) => {
-                                    firestore.collection('exchange_form').doc(`${items.Apply_docID}`).get().then(
-                                        querySnapshot => {
-                                            if (querySnapshot.data() !== undefined) {
-                                                let applydocID = querySnapshot.id;
-                                                let applydocData = querySnapshot.data();
-                                                applydocData.docID = applydocID;
-                                                decideData.push({ data, apply: [applydocData] })
-                                                dispatch({ type: 'GET_USER_APPLICATION_DATA_WAIT_RESPONSE', decideData })
-                                                console.log(decideData)
-                                            }
+            querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    let matchApplyDocID = doc.id;
+                    let matchApplyDocData = doc.data();
+                    console.log(matchApplyDocID)
+                    firestore.collection('exchange_form').doc(`${matchApplyDocID}`).get().then(
+                        querySnapshot => {
+                            let data = querySnapshot.data();
+                            data.docID = matchApplyDocID;
+                            matchApplyDocData.apply.map((items) => {
+                                firestore.collection('exchange_form').doc(`${items.Apply_docID}`).get().then(
+                                    querySnapshot => {
+                                        if (querySnapshot.data() !== undefined) {
+                                            let applydocID = querySnapshot.id;
+                                            let applydocData = querySnapshot.data();
+                                            applydocData.docID = applydocID;
+                                            decideData.push({ data, apply: [applydocData] })
+                                            dispatch({ type: 'GET_USER_APPLICATION_DATA_WAIT_RESPONSE', decideData })
+                                            console.log(decideData)
                                         }
-                                    )
-                                })
+                                    }
+                                )
+                            })
 
-                            }
-                        )
-                    })
-                
+                        }
+                    )
+                })
+
             }
         )
     }

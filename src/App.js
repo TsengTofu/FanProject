@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect, Switch, Link } from "react-router-dom";
+import { Route, Redirect, Switch} from "react-router-dom";
 import firebase from "./config/firebaseConfig";
 
 // 組件們
@@ -48,7 +48,7 @@ class App extends React.Component {
 
 
 	render() {
-		const { authenticated, entry } = this.state;
+		const { authenticated} = this.state;
 		return (
 			<div>
 				

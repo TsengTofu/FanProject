@@ -20,6 +20,7 @@ class Home extends React.Component {
 					<div className="topContent">
 						<SearchBar/>
 					</div>
+					<p>ccddvdvdv</p>
 					<HomePageBoard/>
 					<UpComingEvents/>
 				</div>

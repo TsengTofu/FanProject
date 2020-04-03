@@ -11,10 +11,6 @@ import { searchDataAgainBtn } from '../../store/actions/GetUserFormDataAction'
 import './MemberProfileApplyData.css'
 
 class MemberProfileApplyData extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     // 刪除交換文件的功能
     handleDelete(e) {
         e.preventDefault();
@@ -70,7 +66,7 @@ class MemberProfileApplyData extends React.Component {
             return (
                 <li key={itemDocID} className="user_apply_data_block">
                     <div className="apply_image">
-                        <img src={itemData.url} />
+                        <img src={itemData.url} alt="image"/>
                     </div>
                     <div className="concert_place_exchange_info">
                         <h4>{itemData.ConcertName}</h4>

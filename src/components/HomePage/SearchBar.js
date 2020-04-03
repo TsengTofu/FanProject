@@ -1,17 +1,11 @@
 import React from 'react'
 import ChangeFormPopUp from './ChangeFormPopUp'
-// css part
 import './SearchBar.css';
 
 import { connect } from 'react-redux'
 import {searchBarAction} from '../../store/actions/SearchBarAction'
 
 class SearchBar extends React.Component {
-	constructor(props) {
-		super(props);	
-		// this.newGame = this.newGame.bind(this);
-	}
-	
 	render() {		
 		return (
             <div>

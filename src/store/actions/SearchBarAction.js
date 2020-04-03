@@ -11,7 +11,6 @@ export const searchBarAction = (searchInput) =>{
         .then(querySnapshot=>{
             console.log('AllConcertBasicData',querySnapshot)
             querySnapshot.forEach(doc=>{
-                let datasharchingtung = doc.data();
                 console.log(doc.data())
                 console.log(typeof(doc.data()))
                 // dataArray.push(datasharchingtung)

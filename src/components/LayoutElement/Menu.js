@@ -1,6 +1,6 @@
 import React from 'react'
 import firebase from "../../config/firebaseConfig";
-import { Link,Redirect } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 // 組件
 
 // css part
