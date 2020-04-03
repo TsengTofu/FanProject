@@ -7,7 +7,7 @@ jobs:
   build:
     name: Build and deploy gh-pages
     env:
-      MY_SECRET   : ${{secrets.commit_secret}}
+      MY_SECRET   : ${{TsengTofu}}
       USER_NAME   : TsengTofu
       USER_EMAIL  : tsengbatty@gmail.com
       PUBLISH_DIR : ./dist
