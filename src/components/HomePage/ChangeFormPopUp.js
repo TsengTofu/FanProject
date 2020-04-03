@@ -324,14 +324,14 @@ class ChangeFormPopUp extends React.Component {
     // console.log(this.props.profile.user_name)
     return (
       <div>
-        <div className="change_btn" onClick={() => this.openModal()}>我要交換 <i className="fas fa-chevron-right"></i></div>
+        <div className="change_btn" onClick={() => this.openModal()}>我要交換<i className="fas fa-chevron-right"></i></div>
         <Popup
           open={this.state.open}
           closeOnDocumentClick
           onClose={() => this.closeModal()}
           contentStyle={popUpStyle}>
           <div className="change_form_all">
-            <p className="form_title" >TICKET EXCHANGE FORM</p>
+            <p className="form_title" >TICKET EXCHANGE FORM jbjhj</p>
             <div className="change_form">
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <p>{this.props.name}</p>
