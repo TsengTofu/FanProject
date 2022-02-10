@@ -53,7 +53,7 @@
   "keywords": [],
   "devDependencies": {
     "acorn": "^6.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "redux-devtools-extension": "^2.13.8",
     "sass": "^1.26.3",
     "typescript": "^3.8.3"
